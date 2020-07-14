@@ -24328,7 +24328,7 @@ G.z2.prototype={
 H:function(a){var t=null,s=S.n6(new F.bQ(C.q,C.q,new Y.f7($.UF(),2,C.N),C.q),t,t,t,t,t,C.a0)
 return M.bB(t,T.xF(H.b([new T.fn(1,C.bg,M.bB(C.q7,M.bB(t,T.aE(t,t,C.n,!0,t,Q.av(t,t,A.dH(t,t,this.c===!0?$.t9():$.UE(),t,t,t,t,t,t,t,t,18,t,t,t,t,!0,t,t,t,t,t,t),this.d),C.k,t,t,1,C.l),t,t,s,t,t,t,new V.ax(3,3,3,3),t,t),t,t,t,t,t,t,new V.ax(20,20,20,20),t,300),t),new T.fn(2,C.bg,M.bB(t,T.cr(this.f,C.L,C.I,C.P),t,t,t,t,t,t,t,t,1/0),t)],u.t),C.L,C.I,t),t,t,t,t,t,t,t,t,t)}}
 F.vQ.prototype={
-H:function(a){return new S.oq(new Y.v7(null),"Flutter Demo",X.WW(null,C.lc,X.a2v()),!1,null)}}
+H:function(a){return new S.oq(new Y.v7(null),"Khoa Le CV",X.WW(null,C.lc,X.a2v()),!1,null)}}
 Y.v7.prototype={
 H:function(a){var t=null,s=T.cr(H.b([new S.yB(t),new K.tf(t),new Z.vS(t),new K.vR(t)],u.t),C.bf,C.I,C.P)
 return new M.pl(t,new E.xZ(C.D,!0,s,t),t)}}
