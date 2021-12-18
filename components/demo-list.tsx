@@ -1,6 +1,4 @@
-import NextImage from "next/image";
-
-import { Box, Button, HStack, Text } from "@chakra-ui/react";
+import { Box, Button, HStack, Text, Image } from "@chakra-ui/react";
 
 export interface DemoProps {
   web?: string;
@@ -21,10 +19,10 @@ const DemoList = ({ demos = [] }: { demos: DemoProps[] }) => {
                 colorScheme="blue"
                 maxW={"sm"}
                 leftIcon={
-                  <NextImage
+                  <Image
                     width="24px"
                     height="24px"
-                    src={require("public/images/web-icon.svg")}
+                    src={"/images/web-icon.svg"}
                     alt="web"
                   />
                 }
@@ -39,10 +37,10 @@ const DemoList = ({ demos = [] }: { demos: DemoProps[] }) => {
                 title="iOS Store"
                 onClick={() => window.open(demo.ios)}
                 leftIcon={
-                  <NextImage
+                  <Image
                     width="24px"
                     height="24px"
-                    src={require("public/images/ios-icon.svg")}
+                    src={"/images/ios-icon.svg"}
                     alt="iOS"
                   />
                 }
@@ -55,10 +53,10 @@ const DemoList = ({ demos = [] }: { demos: DemoProps[] }) => {
               <Button
                 onClick={() => window.open(demo.android)}
                 leftIcon={
-                  <NextImage
+                  <Image
                     width="24px"
                     height="24px"
-                    src={require("public/images/android-icon.svg")}
+                    src={"/images/android-icon.svg"}
                     alt="android"
                   />
                 }

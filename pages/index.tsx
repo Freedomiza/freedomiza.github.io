@@ -1,4 +1,5 @@
-import NextImage from "next/image";
+import Head from "next/head";
+
 import profileImg from "public/images/profile.png";
 import jsImg from "public/images/js-icon.svg";
 import dartImg from "public/images/dart-lang.png";
@@ -25,6 +26,7 @@ import {
   DrawerCloseButton,
   useDisclosure,
   Button,
+  Image,
 } from "@chakra-ui/react";
 
 import Layout from "components/common/layouts";
@@ -37,6 +39,10 @@ import ProjectList from "components/project-list";
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>{"Khoa Le 's CV"}</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <AboutMe />
       <MySkill />
     </>
@@ -60,7 +66,7 @@ const AboutMe: React.FC = () => {
     >
       <VStack alignContent="center">
         <Box boxSize="64" p="4">
-          <NextImage objectFit="cover" src={profileImg} alt="Khoa Le" />
+          <Image objectFit="cover" src={profileImg.src} alt="Khoa Le" />
         </Box>
         <Heading size={"2xl"}>{"I'm Khoa Le"}</Heading>
         <Text size="xs" color="gray.300" align="center">
