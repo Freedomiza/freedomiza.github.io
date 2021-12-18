@@ -1,7 +1,6 @@
 const Routes = {
   home: "/",
-  mySkill: "/my-skill",
-  myWork: "/my-work",
+  contact: "/contact",
 };
 
 export default Routes;
