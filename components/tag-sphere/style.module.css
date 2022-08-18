@@ -1,0 +1,9 @@
+.tagcloud-container {
+  display: block;
+  position: relative;
+  width: calc(50vw - 70px);
+  height: calc(50vh - 70px);
+}
+.tagcloud--item {
+  font-weight: bold;
+}
