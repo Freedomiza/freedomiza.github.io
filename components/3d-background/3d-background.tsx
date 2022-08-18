@@ -3,7 +3,7 @@ import DOTS from "vanta/dist/vanta.dots.min";
 // Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
 
 const AnimatedBackground = (props) => {
-  const [vantaEffect, setVantaEffect] = useState<any>(null);
+  const [vantaEffect, setVantaEffect] = useState(null);
   const myRef = useRef(null);
   useEffect(() => {
     if (!vantaEffect) {
