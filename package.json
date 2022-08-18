@@ -22,6 +22,7 @@
     "vanta": "^0.5.22"
   },
   "devDependencies": {
+    "@types/node": "^18.7.6",
     "@types/react": "^17.0.37",
     "babel-plugin-transform-define": "^1.3.0",
     "eslint": "8.5.0",

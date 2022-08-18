@@ -1,16 +1,15 @@
 import {
   Box,
-  Image,
+  Img,
   Center,
   Heading,
   Text,
-  VStack,
   HStack,
   Spacer,
-  Tooltip,
 } from "@chakra-ui/react";
 import React from "react";
 import { StarIcon } from "@chakra-ui/icons";
+import { StaticImageData } from "next/image";
 interface SkillItemProps {
   name: string;
   level: number;
@@ -25,16 +24,10 @@ const SkillItem = React.forwardRef<HTMLDivElement, SkillItemProps>(
         <HStack w="100%" p="4" ref={ref}>
           <Box boxSize="32px">
             {icon != null && typeof icon === "object" && (
-              <Image
-                src={icon.src}
-                alt={name}
-                width={"32px"}
-                height={"32px"}
-                layout="responsive"
-              />
+              <Img src={icon.src} alt={name} width={"32px"} height={"32px"} />
             )}
             {icon != null && typeof icon === "string" && (
-              <Image src={icon} alt={name} layout="responsive" />
+              <Img src={icon} alt={name} />
             )}
           </Box>
 
@@ -46,7 +39,7 @@ const SkillItem = React.forwardRef<HTMLDivElement, SkillItemProps>(
             {Array(level)
               .fill("")
               .map((_) => (
-                <Center key={`star_${Math.random()}}`} size="4" pr="3">
+                <Center key={`star_${Math.random()}}`} w="4" h="4" pr="3">
                   <StarIcon color="yellow.500" />
                 </Center>
               ))}
