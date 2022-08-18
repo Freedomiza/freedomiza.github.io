@@ -1,6 +1,15 @@
 import React from "react";
 
-import { Box, Center, Flex, Text, Link, HStack } from "@chakra-ui/react";
+import {
+  Box,
+  Link,
+  HStack,
+  Flex,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+} from "@chakra-ui/react";
 import NLink from "next/link";
 import Routes from "constants/routes";
 
@@ -11,31 +20,26 @@ interface NavbarProps {
 export default function Navbar({ children }: NavbarProps) {
   return (
     <Box
-      w="100%"
-      h={64}
-      p={4}
-      color="white"
-      bgColor="#171D26"
-      as="nav"
-      style={{
-        position: "sticky",
-        top: 0,
-      }}
-      zIndex={99}
+      flexDirection="row"
+      // style={{
+      //   position: "sticky",
+      //   top: 0,
+      // }}
+      // zIndex={99}
     >
-      <HStack h="100%">
-        <Box p="1rem">
-          <Link as={NLink} href={Routes.home} fontSize="md">
-            About me
-          </Link>
-        </Box>
+      <Breadcrumb h="100%">
+        <BreadcrumbItem p="1rem">
+          <NLink href={Routes.home} passHref>
+            <BreadcrumbLink fontSize="md">About me</BreadcrumbLink>
+          </NLink>
+        </BreadcrumbItem>
 
-        <Box p="1rem">
-          <Link as={NLink} href={Routes.contact} fontSize="md">
-            My contact
-          </Link>
-        </Box>
-      </HStack>
+        <BreadcrumbItem p="1rem">
+          <NLink href={Routes.contact} passHref>
+            <BreadcrumbLink fontSize="md">My contact</BreadcrumbLink>
+          </NLink>
+        </BreadcrumbItem>
+      </Breadcrumb>
       {children}
     </Box>
   );

@@ -7,8 +7,12 @@ import {
   Text,
   Wrap,
   WrapItem,
+  Link,
+  Button,
 } from "@chakra-ui/react";
+import NLink from "next/link";
 import AnimatedBackground from "components/3d-background/3d-background";
+import Routes from "constants/routes";
 import profileImg from "public/images/profile.png";
 import ScrollButton from "../scroll-button";
 import TagSphere from "../tag-sphere";
@@ -51,7 +55,15 @@ const AboutMe: React.FC = () => {
             {"I 'd love to research new web technologies and building a cool"}
             product based on mobile or web application.
           </Text>
-          <Box p="2"></Box>
+
+          <Box p="2" alignItems="center"></Box>
+          <Center>
+            <Button colorScheme="blue">
+              <NLink href={Routes.contact} passHref>
+                <Link> Contact me!</Link>
+              </NLink>
+            </Button>
+          </Center>
         </Box>
       </VStack>
     </Center>
@@ -65,7 +77,6 @@ const AboutMe: React.FC = () => {
         color="white"
         alignContent="center"
         justifyContent="center"
-        // bgGradient="linear(to-r, #222833, #171D26, #222833)"
         position={"relative"}
       >
         <Wrap direction="row">

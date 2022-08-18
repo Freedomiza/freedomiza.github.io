@@ -5,7 +5,7 @@ import { Container } from "@chakra-ui/react";
 export default function Layout({ children }) {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Container
         as="main"
         minHeight={"100vh"}
