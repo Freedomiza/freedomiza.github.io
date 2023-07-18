@@ -48,7 +48,7 @@ const AboutMe: React.FC = () => {
         <Box p="1"></Box>
         <Box maxW="2xl">
           <Text size="md" maxW="2xl" align="center">
-            I’m a 8-years experienced developer in software/mobile development.
+            I’m a 10-years experienced developer in software/mobile development.
             Experienced in React, Angular and hybrid mobile apps like React
             Native and Flutter.
             <br />
@@ -59,7 +59,7 @@ const AboutMe: React.FC = () => {
           <Box p="2" alignItems="center"></Box>
           <Center>
             <Button colorScheme="blue">
-              <NLink href={Routes.contact} passHref>
+              <NLink href={Routes.contact} passHref legacyBehavior>
                 <Link> Contact me!</Link>
               </NLink>
             </Button>

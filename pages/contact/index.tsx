@@ -1,13 +1,6 @@
-import {
-  Flex,
-  Button,
-  Image,
-  Box,
-  Center,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Center, Text, VStack } from "@chakra-ui/react";
 import Layout from "components/common/layouts";
+import ContactButton from "./_components/contact-button";
 
 export default function Contact() {
   const contacts = [
@@ -70,28 +63,4 @@ export default function Contact() {
 
 Contact.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>;
-};
-
-interface ContactButtonProps {
-  href: string;
-  name: string;
-  icon: string;
-}
-const ContactButton = ({ href, name, icon }: ContactButtonProps) => {
-  return (
-    <Button
-      variant={"outline-white"}
-      as="a"
-      href={href}
-      rel="noreferrer"
-      target="_blank"
-      leftIcon={
-        <Box boxSize={"24px"}>
-          <Image src={icon} alt={name} objectFit="cover" />
-        </Box>
-      }
-    >
-      <Text>{name}</Text>
-    </Button>
-  );
 };

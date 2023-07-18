@@ -9,7 +9,7 @@ import {
   Image,
   Flex,
 } from "@chakra-ui/react";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import * as animationData from "assets/json/404-not-found.json";
 
 interface ProjectListProps {
@@ -73,15 +73,7 @@ const ProjectList = ({ projects }: ProjectListProps) => {
       {(!projects || projects.length === 0) && (
         <VStack>
           <Box p="4" w="100%">
-            <Lottie
-              height={200}
-              width={200}
-              options={{
-                animationData: animationData,
-                loop: true,
-                autoplay: true,
-              }}
-            />
+            <Lottie height={200} width={200} animationData={animationData} />
           </Box>
           <Heading size="md" textAlign={"center"}>
             Oops! there seem to be no data in this skills

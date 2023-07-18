@@ -1,4 +1,8 @@
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import {
+  ChakraProvider,
+  extendTheme,
+  createLocalStorageManager,
+} from "@chakra-ui/react";
 import Layout from "../components/common/layouts";
 
 // 2. Extend the theme to include custom colors, fonts, etc
@@ -10,12 +14,14 @@ const colors = {
   },
 };
 const theme = extendTheme({ colors });
+const manager = createLocalStorageManager("my-key");
+
 export default function MyApp({ Component, pageProps }) {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout || ((page) => page);
 
   return getLayout(
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme} colorModeManager={manager}>
       <Component {...pageProps} />
     </ChakraProvider>
   );
