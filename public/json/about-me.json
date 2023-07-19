@@ -1,0 +1,20 @@
+{
+  "skills": [
+    "React",
+    "Angular",
+    "NodeJs",
+    "NextJs",
+    "Dart",
+    "Flutter",
+    "JavaScript",
+    "TypeScript",
+    "CSS",
+    "SCSS",
+    "HTML5",
+    "Gatsby"
+  ],
+  "introduction1": "I'm Khoa Le",
+  "introduction2": "Frontend developer, creating awesome websites and mobile apps",
+  "summary": "I’m a 10-years experienced developer in software/mobile development.\n\r Experienced in React, Angular and hybrid mobile apps like React Native and Flutter. \n\n\r I 'd love to research new web technologies and building a cool product based on mobile or web application."
+
+}

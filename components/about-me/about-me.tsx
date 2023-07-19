@@ -9,6 +9,7 @@ import {
   WrapItem,
   Link,
   Button,
+  Flex,
 } from "@chakra-ui/react";
 import NLink from "next/link";
 import AnimatedBackground from "components/3d-background/3d-background";
@@ -18,70 +19,62 @@ import ScrollButton from "../scroll-button";
 import TagSphere from "../tag-sphere";
 import TypeWriter from "../type-writer";
 
-const AboutMe: React.FC = () => {
-  const texts: String[] = [
-    "React",
-    "Angular",
-    "NodeJs",
-    "NextJs",
-    "Dart",
-    "Flutter",
-    "JavaScript",
-    "TypeScript",
-    "CSS",
-    "SCSS",
-    "HTML5",
-    "Gatsby",
-  ];
-  const profileBox = (
-    <Center>
-      <VStack alignContent="center">
-        <Box boxSize="64" p="4">
-          <Image objectFit="cover" src={profileImg.src} alt="Khoa Le" />
-        </Box>
-        <Heading size={"2xl"}>
-          <TypeWriter text="I'm Khoa Le" />
-        </Heading>
-        <Text size="xs" color="gray.300" align="center">
-          Frontend developer, creating awesome websites and mobile apps
-        </Text>
-        <Box p="1"></Box>
-        <Box maxW="2xl">
-          <Text size="md" maxW="2xl" align="center">
-            I’m a 10-years experienced developer in software/mobile development.
-            Experienced in React, Angular and hybrid mobile apps like React
-            Native and Flutter.
-            <br />
-            {"I 'd love to research new web technologies and building a cool"}
-            product based on mobile or web application.
-          </Text>
+import aboutMeJson from "public/json/about-me.json";
+import { ReactNode } from "react";
 
-          <Box p="2" alignItems="center"></Box>
-          <Center>
-            <Button colorScheme="blue">
-              <NLink href={Routes.contact} passHref legacyBehavior>
-                <Link> Contact me!</Link>
-              </NLink>
-            </Button>
-          </Center>
-        </Box>
-      </VStack>
-    </Center>
-  );
+const profileBox = (
+  <Center>
+    <VStack alignContent="center">
+      <Box boxSize="64" p="4">
+        <Image objectFit="cover" src={profileImg.src} alt="Khoa Le" />
+      </Box>
+      <Heading size={"2xl"}>
+        <TypeWriter text={aboutMeJson.introduction1} />
+      </Heading>
+      <Text size="xs" color="gray.300" align="center">
+        {aboutMeJson.introduction2}
+      </Text>
+      <Box p="1"></Box>
+      <Box maxW="2xl">
+        <Text size="md" maxW="2xl" align="center" whiteSpace={"break-spaces"}>
+          {aboutMeJson.summary}
+        </Text>
+
+        <Box p="4" alignItems="center"></Box>
+        <Center>
+          <Button colorScheme="blue">
+            <NLink href={Routes.contact} passHref legacyBehavior>
+              <Link> Contact me!</Link>
+            </NLink>
+          </Button>
+        </Center>
+      </Box>
+    </VStack>
+  </Center>
+);
+
+const AboutMe: React.FC = () => {
+  const texts: ReactNode[] = aboutMeJson.skills;
   return (
     <AnimatedBackground>
       <Center
-        p={4}
+        p={2}
         minH={200}
-        h="calc(100vh - 64px)"
+        w="calc(100vw)"
+        h="calc(100vh)"
         color="white"
         alignContent="center"
         justifyContent="center"
         position={"relative"}
       >
-        <Wrap direction="row">
-          <WrapItem>{profileBox}</WrapItem>
+        <Wrap direction="row" justify="center">
           <WrapItem>
+            <Center>{profileBox}</Center>
+          </WrapItem>
+          <WrapItem>
+            <Box p="4" w="64"></Box>
+          </WrapItem>
+          <WrapItem flex="1">
             <Center>
               <TagSphere texts={texts} />
             </Center>

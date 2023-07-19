@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import DOTS from "vanta/dist/vanta.dots.min";
+import DOTS from "vanta/dist/vanta.net.min.js";
 // Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
 
 const AnimatedBackground = (props) => {

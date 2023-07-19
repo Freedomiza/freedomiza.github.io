@@ -14,10 +14,6 @@ export default function Home() {
         <title>{"Khoa Le 's CV"}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Script
-        src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
-        strategy="beforeInteractive"
-      ></Script>
 
       <AboutMe />
       <MySkill />

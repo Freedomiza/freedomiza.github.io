@@ -1,8 +1,9 @@
 import Script from "next/script";
 import React, { useEffect } from "react";
 import styles from "./style.module.css";
+import clsx from "clsx";
 type TagSphereProps = {
-  texts: String[];
+  texts: React.ReactNode[];
 };
 
 const TagSphere: React.FC<TagSphereProps> = ({ texts }) => {
@@ -27,7 +28,13 @@ const TagSphere: React.FC<TagSphereProps> = ({ texts }) => {
     };
   }, [texts]);
 
-  return <div className={styles["tagcloud-container"]}></div>;
+  return (
+    <div className={clsx(styles["tagcloud-container"], styles.stage)}>
+      <figure className={styles.ball}>
+        <span className={styles.shadow}></span>
+      </figure>
+    </div>
+  );
 };
 
 export default TagSphere;
