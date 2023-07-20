@@ -1,0 +1,20 @@
+[
+  {
+    "id": 111,
+    "href": "skype://freedom_iza",
+    "name": "Skype",
+    "icon": "/images/skype-icon.svg"
+  },
+  {
+    "id": 222,
+    "href": "https://github.com/Freedomiza",
+    "name": "Github",
+    "icon": "/images/github-logo.svg"
+  },
+  {
+    "id": 333,
+    "href": "https://www.linkedin.com/in/khoa-le-b31b22a8/",
+    "name": "Linkedin",
+    "icon": "/images/linkedin-icon.svg"
+  }
+]

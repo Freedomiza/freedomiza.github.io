@@ -60,7 +60,7 @@ const AboutMe: React.FC = () => {
       <Center
         p={2}
         minH={200}
-        w="calc(100vw)"
+        w="100%"
         h="calc(100vh)"
         color="white"
         alignContent="center"

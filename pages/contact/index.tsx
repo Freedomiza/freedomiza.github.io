@@ -1,28 +1,18 @@
 import { Box, Center, Text, VStack } from "@chakra-ui/react";
+
 import Layout from "components/common/layouts";
-import ContactButton from "./_components/contact-button";
+import ContactButton from "components/contact-button";
+import contactMeJson from "public/json/contact-me.json";
+
+type Contact = {
+  id: string;
+  href: string;
+  name: string;
+  icon: string;
+};
 
 export default function Contact() {
-  const contacts = [
-    {
-      id: 111,
-      href: "skype://freedom_iza",
-      name: "Skype",
-      icon: "/images/skype-icon.svg",
-    },
-    {
-      id: 222,
-      href: "https://github.com/Freedomiza",
-      name: "Github",
-      icon: "/images/github-logo.svg",
-    },
-    {
-      id: 333,
-      href: "https://www.linkedin.com/in/khoa-le-b31b22a8/",
-      name: "Linkedin",
-      icon: "/images/linkedin-icon.svg",
-    },
-  ];
+  const contacts = contactMeJson;
   return (
     <>
       <Center
