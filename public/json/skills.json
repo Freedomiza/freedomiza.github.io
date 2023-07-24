@@ -1,5 +1,54 @@
 [
   {
+    "id": 3,
+    "name": "Flutter",
+    "icon": "images/flutter_logo.svg",
+    "level": 5,
+    "projects": [
+      {
+        "id": "11",
+        "name": "Transwap",
+        "icon": "/images/transwap-logo.png",
+        "description": "Company: Transwap",
+        "content": [
+          "Role: Mobile Lead • July 2020 - Today",
+          "Flutter Mobile App for move money between countries",
+          "- Simplifying Global Finance",
+          "- Transfer money to any country effortlessly",
+          "- Tracking transaction easily"
+        ],
+        "tech": ["Flutter, Firebase, AppCenter, Azure"],
+        "demo": [
+          {
+            "web": "https://transwap.com/",
+            "ios": "https://apps.apple.com/app/id1564013302",
+            "android": "https://play.google.com/store/apps/details?id=com.transwap.luna"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "name": "HyWallet",
+        "icon": "/images/hywallet-icon.png",
+        "description": "Company: HYDEFI PTE. LTD",
+        "content": [
+          "Role: Mobile Lead • October 2021 - Today",
+          "Flutter Mobile App for send and receive money",
+          "- Simplifying Global Finance",
+          "- Transfer money to any country effortlessly",
+          "- Tracking transaction easily"
+        ],
+        "tech": ["Flutter, Firebase, AppCenter, Azure"],
+        "demo": [
+          {
+            "ios": "https://testflight.apple.com/join/liAZ19kC",
+            "android": "https://install.appcenter.ms/orgs/hywallet/apps/hywallet/distribution_groups/sandbox"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": 1,
     "name": "React",
     "icon": "images/react-icon.svg",
@@ -84,54 +133,6 @@
         ]
       }
     ]
-  },
-  {
-    "id": 3,
-    "name": "Flutter",
-    "icon": "images/flutter_logo.svg",
-    "level": 5,
-    "projects": [
-      {
-        "id": "11",
-        "name": "Transwap",
-        "icon": "/images/transwap-logo.png",
-        "description": "Company: Transwap",
-        "content": [
-          "Role: Mobile Lead • July 2020 - Today",
-          "Flutter Mobile App for move money between countries",
-          "- Simplifying Global Finance",
-          "- Transfer money to any country effortlessly",
-          "- Tracking transaction easily"
-        ],
-        "tech": ["Flutter, Firebase, AppCenter, Azure"],
-        "demo": [
-          {
-            "web": "https://transwap.com/",
-            "ios": "https://apps.apple.com/app/id1564013302",
-            "android": "https://play.google.com/store/apps/details?id=com.transwap.luna"
-          }
-        ]
-      },
-      {
-        "id": "12",
-        "name": "HyWallet",
-        "icon": "/images/hywallet-icon.png",
-        "description": "Company: HYDEFI PTE. LTD",
-        "content": [
-          "Role: Mobile Lead • October 2021 - Today",
-          "Flutter Mobile App for send and receive money",
-          "- Simplifying Global Finance",
-          "- Transfer money to any country effortlessly",
-          "- Tracking transaction easily"
-        ],
-        "tech": ["Flutter, Firebase, AppCenter, Azure"],
-        "demo": [
-          {
-            "ios": "https://testflight.apple.com/join/liAZ19kC",
-            "android": "https://install.appcenter.ms/orgs/hywallet/apps/hywallet/distribution_groups/sandbox"
-          }
-        ]
-      }
-    ]
   }
+  
 ]

@@ -3,7 +3,6 @@ import {
   Box,
   Heading,
   VStack,
-  Tooltip,
   Drawer,
   DrawerBody,
   DrawerFooter,
@@ -14,6 +13,7 @@ import {
   useDisclosure,
   Button,
 } from "@chakra-ui/react";
+
 import jsImg from "public/images/js-icon.svg";
 import dartImg from "public/images/dart-lang.png";
 import flutterImg from "public/images/flutter_logo.svg";
@@ -21,33 +21,36 @@ import reactImg from "public/images/react-icon.svg";
 import angularImg from "public/images/angular-icon.svg";
 import nextImg from "public/images/nextjs-icon.png";
 import nodeImg from "public/images/node-icon.svg";
-import skillJson from "assets/json/skills.json";
-import ProjectList from "components/project-list";
 
+import skillsJson from "public/json/skills.json";
+
+import ProjectList from "components/project-list";
 import SkillItem from "components/skill-item";
 import SubSkillItem from "components/sub-skill-item";
+import styles from "./style.module.css";
+
 const MySkill: React.FC = () => {
   const [selectedSkill, setSelectedSkill] = useState("");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [isTooltipOpen, setIsTooltipOpen] = useState(true);
   const onSkillSelected = useCallback(
     (skill: string) => {
-      console.log(`clicked ${skill}`);
       setIsTooltipOpen(false);
       setSelectedSkill(skill);
       onOpen();
     },
     [onOpen]
   );
+
   return (
     <>
       <Box
-        p={4}
-        minH="90vh"
+        minH="100vh"
         color="gray.700"
         alignContent="center"
         justifyContent="center"
         bgColor="gray.100"
+        className={styles.background}
       >
         <VStack alignContent="center" spacing={4}>
           <Box p="4" />
@@ -55,22 +58,16 @@ const MySkill: React.FC = () => {
           <Box p="1" />
 
           <SkillItem name="dart" icon={dartImg} level={5} color="gray.300" />
-          <Tooltip
-            hasArrow
-            label="Click to view my past project"
-            placement="top-end"
-            isOpen={isTooltipOpen}
-          >
-            <SubSkillItem
-              name="flutter"
-              icon={flutterImg}
-              level={5}
-              color="gray.200"
-              onPress={() => {
-                onSkillSelected("flutter");
-              }}
-            />
-          </Tooltip>
+
+          <SubSkillItem
+            name="flutter"
+            icon={flutterImg}
+            level={5}
+            color="gray.200"
+            onPress={() => {
+              onSkillSelected("flutter");
+            }}
+          />
 
           <SkillItem
             name="javascript"
@@ -118,6 +115,7 @@ const MySkill: React.FC = () => {
           />
         </VStack>
       </Box>
+
       <Drawer isOpen={isOpen} placement="right" onClose={onClose} size={"md"}>
         <DrawerOverlay />
         <DrawerContent>
@@ -125,7 +123,7 @@ const MySkill: React.FC = () => {
           <DrawerHeader>{`My ${selectedSkill}'s projects`}</DrawerHeader>
 
           <DrawerBody>
-            <ProjectList projects={skillJson[selectedSkill]} />
+            <ProjectList projects={skillsJson[selectedSkill]} />
           </DrawerBody>
 
           <DrawerFooter>

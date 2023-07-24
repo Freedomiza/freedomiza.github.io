@@ -10,6 +10,7 @@ import {
 import React from "react";
 import { StarIcon } from "@chakra-ui/icons";
 import { StaticImageData } from "next/image";
+
 interface SkillItemProps {
   name: string;
   level: number;

@@ -5,8 +5,9 @@ import Layout from "components/common/layouts";
 import React from "react";
 
 import AboutMe from "components/about-me";
-import MySkill from "components/my-skill";
-import Script from "next/script";
+import MySkill from "components/my-skills";
+import MyProjects from "components/my-projects";
+
 export default function Home() {
   return (
     <>
@@ -16,7 +17,10 @@ export default function Home() {
       </Head>
 
       <AboutMe />
+
       <MySkill />
+
+      <MyProjects />
     </>
   );
 }

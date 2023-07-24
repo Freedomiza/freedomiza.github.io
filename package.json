@@ -14,6 +14,8 @@
     "@emotion/react": "^11.11.1",
     "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.11.0",
+    "@react-spring/parallax": "^9.7.3",
+    "@react-spring/web": "^9.7.3",
     "clsx": "^2.0.0",
     "framer-motion": "^10.12.22",
     "lottie-react": "^2.4.0",
@@ -21,6 +23,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-mobile-store-button": "^0.0.6",
+    "react-vertical-timeline-component": "^3.6.0",
     "vanta": "^0.5.22"
   },
   "devDependencies": {
