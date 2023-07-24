@@ -21,7 +21,7 @@ interface SkillItemProps {
 const SkillItem = React.forwardRef<HTMLDivElement, SkillItemProps>(
   ({ name, level, color, icon }: SkillItemProps, ref) => {
     return (
-      <Center minW="xs" maxW="md" w="100%" h="80px" bg={color}>
+      <Center minW="xs" maxW="md" h="80px" bg={color}>
         <HStack w="100%" p="4" ref={ref}>
           <Box boxSize="32px">
             {icon != null && typeof icon === "object" && (

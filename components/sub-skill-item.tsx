@@ -7,7 +7,7 @@ interface SubSkillItemProps {
   level: number;
   color: string;
   icon?: string | StaticImageData;
-  onPress: VoidFunction;
+  onPress?: VoidFunction;
 }
 
 const SubSkillItem = React.forwardRef<HTMLDivElement, SubSkillItemProps>(
@@ -16,7 +16,6 @@ const SubSkillItem = React.forwardRef<HTMLDivElement, SubSkillItemProps>(
       <Center
         minW="xs"
         maxW="md"
-        w="100%"
         minH="80px"
         bg={color}
         pl="8"

@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo } from "react";
 
-import { Box, Heading, VStack, Img, useFocusEffect } from "@chakra-ui/react";
-import skillsJson from "assets/json/skills.json";
+import { Box, Heading, VStack, Img } from "@chakra-ui/react";
+import skillsJson from "public/json/skills.json";
 
 import {
   VerticalTimeline,
@@ -9,17 +9,10 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
-import SkillItem from "components/skill-item";
+import ProjectItem from "./project-item";
+import { ProjectByTech } from "./type";
 
-// type ProjectByTech = {
-//   id: string;
-//   icon: string;
-//   name: string;
-//   description: string;
-//   content: string[];
-//   tech: string[];
-//   demo: any;
-// };
+const defaultBgColor = "#FDFDFD";
 
 export default function MyProjects() {
   const projects = useMemo(() => {
@@ -30,7 +23,6 @@ export default function MyProjects() {
 
     return arr;
   }, []);
-  console.log({ projects });
 
   return (
     <VStack alignContent="center" spacing={4} minH={"100vh"}>
@@ -38,39 +30,34 @@ export default function MyProjects() {
       <Heading>My Projects</Heading>
       <Box p="1" />
       <VerticalTimeline>
-        {projects.map((skill, index) => {
+        {projects.map((project: ProjectByTech, index) => {
           return (
             <VerticalTimelineElement
-              key={`${skill.id}_${skill.name}`}
+              key={`${project.id}_${project.name}`}
               className="vertical-timeline-element--work"
               contentStyle={{
-                background: "#FDFDFD",
+                background: defaultBgColor,
               }}
               contentArrowStyle={{
-                borderRight: "7px solid #FDFDFD",
+                borderRight: `7px solid ${defaultBgColor}`,
               }}
-              date="2011 - present"
+              date={project.date}
               iconStyle={{
-                background: "#FDFDFD",
+                background: project.iconBgColor ?? defaultBgColor,
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
               }}
               icon={
                 <Img
-                  src={skill.icon}
-                  alt={skill.name}
-                  width={"32px"}
-                  height={"32px"}
+                  src={project.icon}
+                  alt={project.name}
+                  width={project.iconWidth ?? "32px"}
+                  height={project.iconHeight ?? "32px"}
                 />
               }
             >
-              <SkillItem
-                name={skill.name}
-                icon={skill.icon}
-                level={skill.level}
-                color="white"
-              />
+              <ProjectItem project={project} />
             </VerticalTimelineElement>
           );
         })}
