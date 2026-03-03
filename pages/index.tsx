@@ -76,7 +76,7 @@ export default function Home() {
 
         {/* Third Background: Rocket Animation */}
         <ParallaxLayer
-          offset={isDesktop ? 2 : 4} // Moved lower than the workspace
+          offset={isDesktop ? 3 : 7.5} // Moved further towards the bottom
           speed={0.4}
           factor={isDesktop ? 1.5 : 2}
           style={{ zIndex: 0, opacity: 0.6 }}
