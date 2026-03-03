@@ -23,6 +23,6 @@ export default function MyApp({ Component, pageProps }) {
   return getLayout(
     <ChakraProvider theme={theme} colorModeManager={manager}>
       <Component {...pageProps} />
-    </ChakraProvider>
+    </ChakraProvider>,
   );
 }

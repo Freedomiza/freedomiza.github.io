@@ -25,7 +25,7 @@ export default function MyProjects() {
   }, []);
 
   return (
-    <VStack alignContent="center" spacing={4} minH={"100vh"}>
+    <VStack alignContent="center" spacing={4} minH={"100vh"} w="full">
       <Box p="4" />
       <Heading>My Projects</Heading>
       <Box p="1" />
@@ -36,17 +36,23 @@ export default function MyProjects() {
               key={`${project.id}_${project.name}`}
               className="vertical-timeline-element--work"
               contentStyle={{
-                background: defaultBgColor,
+                background: "rgba(255, 255, 255, 0.05)",
+                backdropFilter: "blur(10px)",
+                boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+                border: "1px solid rgba(255, 255, 255, 0.18)",
+                borderRadius: "16px",
+                color: "#fff",
               }}
               contentArrowStyle={{
-                borderRight: `7px solid ${defaultBgColor}`,
+                borderRight: "7px solid rgba(255, 255, 255, 0.1)",
               }}
               date={project.date}
               iconStyle={{
-                background: project.iconBgColor ?? defaultBgColor,
+                background: project.iconBgColor ?? "rgba(255, 255, 255, 0.2)",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                boxShadow: "0 0 15px rgba(49, 130, 206, 0.5)",
               }}
               icon={
                 <Img
@@ -56,6 +62,7 @@ export default function MyProjects() {
                   height={project.iconHeight ?? "32px"}
                 />
               }
+              hea
             >
               <ProjectItem project={project} />
             </VerticalTimelineElement>

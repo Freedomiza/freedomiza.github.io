@@ -1,13 +1,12 @@
-import { Box } from "@chakra-ui/react";
-
 import Layout from "components/common/layouts";
+import DualColumnLayout from "components/common/dual-column-layout";
 
-const MySkill = () => {
-  return <Box>my skill</Box>;
+const MySkillPage = () => {
+  return <DualColumnLayout />;
 };
 
-export default MySkill;
+export default MySkillPage;
 
-MySkill.getLayout = function getLayout(page: React.ReactNode) {
+MySkillPage.getLayout = function getLayout(page: React.ReactNode) {
   return <Layout>{page}</Layout>;
 };

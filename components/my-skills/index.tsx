@@ -18,15 +18,13 @@ const MySkill: React.FC = () => {
     <>
       <Box
         minH="100vh"
-        color="gray.700"
+        color="white"
         alignContent="center"
         justifyContent="center"
-        bgColor="gray.100"
-        className={styles.background}
+        position="relative"
       >
-        <VStack alignContent="center" spacing={4}>
-          <Box p="4" />
-          <Heading>My Skill</Heading>
+        <VStack alignContent="center" spacing={4} w="full">
+          <Heading>My Skills</Heading>
           <Box p="1" />
 
           <SkillItem name="dart" icon={dartImg} level={5} color="gray.300" />

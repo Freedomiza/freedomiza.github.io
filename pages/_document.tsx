@@ -9,7 +9,15 @@ export default function Document() {
         <Main />
         <NextScript />
         <Script
-          src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"
+          src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"
+          strategy="beforeInteractive"
+        ></Script>
+        <Script
+          src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"
+          strategy="beforeInteractive"
+        ></Script>
+        <Script
+          src="https://unpkg.com/three@0.126.0/examples/js/controls/OrbitControls.js"
           strategy="beforeInteractive"
         ></Script>
       </body>

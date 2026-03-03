@@ -9,7 +9,7 @@ import {
   WrapItem,
   Link,
   Button,
-  Flex,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import NLink from "next/link";
 import AnimatedBackground from "components/3d-background/3d-background";
@@ -22,28 +22,37 @@ import TypeWriter from "../type-writer";
 import aboutMeJson from "public/json/about-me.json";
 import { ReactNode } from "react";
 
-const profileBox = (
-  <Center>
-    <VStack alignContent="center">
-      <Box boxSize="64" p="4">
-        <Image objectFit="cover" src={profileImg.src} alt="Khoa Le" />
+const ProfileBox = ({ isDesktop }: { isDesktop: boolean }) => (
+  <Center w="full">
+    <VStack alignContent="center" spacing={isDesktop ? 4 : 2} w="full">
+      <Box boxSize={isDesktop ? "64" : "48"} p="4">
+        <Image
+          objectFit="cover"
+          src={profileImg.src}
+          alt="Khoa Le"
+          borderRadius="full"
+        />
       </Box>
-      <Heading size={"2xl"}>
+      <Heading size={isDesktop ? "2xl" : "xl"} textAlign="center">
         <TypeWriter text={aboutMeJson.introduction1} />
       </Heading>
-      <Text size="xs" color="gray.300" align="center">
+      <Text fontSize={isDesktop ? "md" : "sm"} color="gray.300" align="center">
         {aboutMeJson.introduction2}
       </Text>
       <Box p="1"></Box>
-      <Box maxW="2xl">
-        <Text size="md" maxW="2xl" align="center" whiteSpace={"break-spaces"}>
+      <Box maxW="2xl" px={4}>
+        <Text
+          fontSize={isDesktop ? "md" : "sm"}
+          align="center"
+          whiteSpace={"break-spaces"}
+        >
           {aboutMeJson.summary}
         </Text>
 
-        <Box p="4" alignItems="center"></Box>
+        <Box p="2"></Box>
         <Center>
           <NLink href={Routes.contact} passHref legacyBehavior>
-            <Button colorScheme="blue" as="a">
+            <Button colorScheme="blue" as="a" size={isDesktop ? "md" : "sm"}>
               Contact me!
             </Button>
           </NLink>
@@ -54,35 +63,43 @@ const profileBox = (
 );
 
 const AboutMe: React.FC = () => {
+  const isDesktop = useBreakpointValue({ base: false, md: true }) ?? false;
   const texts: ReactNode[] = aboutMeJson.skills;
   return (
-    <AnimatedBackground>
-      <Center
-        p={2}
-        minH={200}
-        w="100%"
-        h="calc(100vh)"
-        color="white"
-        alignContent="center"
-        justifyContent="center"
-        position={"relative"}
+    <Center
+      p={isDesktop ? 4 : 2}
+      minH={200}
+      w="100%"
+      h="calc(100vh)"
+      color="white"
+      alignContent="center"
+      justifyContent="center"
+      position={"relative"}
+      overflow="hidden"
+    >
+      <Wrap
+        direction="row"
+        justify="center"
+        zIndex={1}
+        spacing={isDesktop ? 8 : 4}
+        w="full"
       >
-        <Wrap direction="row" justify="center">
-          <WrapItem>
-            <Center>{profileBox}</Center>
-          </WrapItem>
+        <WrapItem>
+          <ProfileBox isDesktop={isDesktop} />
+        </WrapItem>
+        {isDesktop && (
           <WrapItem>
             <Box p="4" w="64"></Box>
           </WrapItem>
-          <WrapItem flex="1">
-            <Center>
-              <TagSphere texts={texts} />
-            </Center>
-          </WrapItem>
-        </Wrap>
-        <ScrollButton />
-      </Center>
-    </AnimatedBackground>
+        )}
+        <WrapItem flex="1" minW={isDesktop ? "400px" : "100%"}>
+          <Center w="full">
+            <TagSphere texts={texts} />
+          </Center>
+        </WrapItem>
+      </Wrap>
+      <ScrollButton />
+    </Center>
   );
 };
 

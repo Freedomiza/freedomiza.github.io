@@ -17,14 +17,22 @@ const SubSkillItem = React.forwardRef<HTMLDivElement, SubSkillItemProps>(
         minW="xs"
         maxW="md"
         minH="80px"
-        bg={color}
+        bg="rgba(255, 255, 255, 0.03)"
+        backdropFilter="blur(10px)"
+        borderRadius="xl"
+        border="1px solid rgba(255, 255, 255, 0.05)"
+        boxShadow="lg"
+        color="whiteAlpha.900"
         pl="8"
         ref={ref}
         onClick={onPress}
         _hover={{
+          bg: "rgba(255, 255, 255, 0.08)",
+          transform: "translateY(-2px)",
           boxShadow: "outline",
           cursor: "pointer",
         }}
+        transition="all 0.3s"
       >
         <HStack w="100%" p="4">
           <Box boxSize="32px">
@@ -37,7 +45,9 @@ const SubSkillItem = React.forwardRef<HTMLDivElement, SubSkillItemProps>(
           </Box>
 
           <Box p="4">
-            <Text>{name}</Text>
+            <Text fontWeight="medium" color="whiteAlpha.800">
+              {name}
+            </Text>
           </Box>
           <Spacer />
           <Center p="4">
@@ -45,7 +55,7 @@ const SubSkillItem = React.forwardRef<HTMLDivElement, SubSkillItemProps>(
               .fill("")
               .map((_, index) => (
                 <Center key={`star_${name}_${index}`} w="4" h="4" pr="3">
-                  <StarIcon color="yellow.500" />
+                  <StarIcon color="yellow.400" />
                 </Center>
               ))}
           </Center>

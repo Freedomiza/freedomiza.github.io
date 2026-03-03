@@ -21,7 +21,17 @@ interface SkillItemProps {
 const SkillItem = React.forwardRef<HTMLDivElement, SkillItemProps>(
   ({ name, level, color, icon }: SkillItemProps, ref) => {
     return (
-      <Center minW="xs" maxW="md" h="80px" bg={color}>
+      <Center
+        minW="xs"
+        maxW="md"
+        h="80px"
+        bg="rgba(255, 255, 255, 0.05)"
+        backdropFilter="blur(10px)"
+        borderRadius="xl"
+        border="1px solid rgba(255, 255, 255, 0.1)"
+        boxShadow="xl"
+        color="whiteAlpha.900"
+      >
         <HStack w="100%" p="4" ref={ref}>
           <Box boxSize="32px">
             {icon != null && typeof icon === "object" && (
@@ -33,7 +43,9 @@ const SkillItem = React.forwardRef<HTMLDivElement, SkillItemProps>(
           </Box>
 
           <Box p="4">
-            <Text>{name}</Text>
+            <Text fontWeight="bold" color="blue.200" textTransform="capitalize">
+              {name}
+            </Text>
           </Box>
           <Spacer />
           <Center p="4">
@@ -41,7 +53,7 @@ const SkillItem = React.forwardRef<HTMLDivElement, SkillItemProps>(
               .fill("")
               .map((_, index) => (
                 <Center key={`star_${name}_${index}`} w="4" h="4" pr="3">
-                  <StarIcon color="yellow.500" />
+                  <StarIcon color="yellow.400" />
                 </Center>
               ))}
           </Center>

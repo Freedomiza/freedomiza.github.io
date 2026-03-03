@@ -43,7 +43,9 @@ const ProjectList = ({ projects }: ProjectListProps) => {
                   bg={project.iconBgColor || "gray.100"}
                   mr="4"
                 />
-                <Heading size="md">{project.name}</Heading>
+                <Heading size="md" color={project.iconBgColor || "gray.100"}>
+                  {project.name}
+                </Heading>
               </Flex>
               <Box pb="4" />
               <Text size="sm">{project.description}</Text>
