@@ -1,11 +1,5 @@
 [
   {
-    "id": 111,
-    "href": "skype://freedom_iza",
-    "name": "Skype",
-    "icon": "/images/skype-icon.svg"
-  },
-  {
     "id": 222,
     "href": "https://github.com/Freedomiza",
     "name": "Github",
@@ -16,5 +10,11 @@
     "href": "https://www.linkedin.com/in/khoa-le-b31b22a8/",
     "name": "Linkedin",
     "icon": "/images/linkedin-icon.svg"
+  },
+  {
+    "id": 444,
+    "href": "https://t.me/freedom_iza",
+    "name": "Telegram",
+    "icon": "/images/telegram-icon.svg"
   }
 ]

@@ -39,8 +39,8 @@ const SkillItem = React.forwardRef<HTMLDivElement, SkillItemProps>(
           <Center p="4">
             {Array(level)
               .fill("")
-              .map((_) => (
-                <Center key={`star_${Math.random()}}`} w="4" h="4" pr="3">
+              .map((_, index) => (
+                <Center key={`star_${name}_${index}`} w="4" h="4" pr="3">
                   <StarIcon color="yellow.500" />
                 </Center>
               ))}
@@ -48,7 +48,7 @@ const SkillItem = React.forwardRef<HTMLDivElement, SkillItemProps>(
         </HStack>
       </Center>
     );
-  }
+  },
 );
 
 SkillItem.displayName = "SkillItem";

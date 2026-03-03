@@ -1,4 +1,4 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 import Layout from "components/common/layouts";
 
@@ -8,6 +8,6 @@ const MySkill = () => {
 
 export default MySkill;
 
-MySkill.getLayout = function getLayout(page) {
+MySkill.getLayout = function getLayout(page: React.ReactNode) {
   return <Layout>{page}</Layout>;
 };

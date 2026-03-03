@@ -42,11 +42,11 @@ const profileBox = (
 
         <Box p="4" alignItems="center"></Box>
         <Center>
-          <Button colorScheme="blue">
-            <NLink href={Routes.contact} passHref legacyBehavior>
-              <Link> Contact me!</Link>
-            </NLink>
-          </Button>
+          <NLink href={Routes.contact} passHref legacyBehavior>
+            <Button colorScheme="blue" as="a">
+              Contact me!
+            </Button>
+          </NLink>
         </Center>
       </Box>
     </VStack>
