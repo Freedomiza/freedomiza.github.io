@@ -9,9 +9,31 @@ import MySkill from "components/my-skills";
 import MyProjects from "components/my-projects";
 
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import AnimatedBackground from "components/3d-background/3d-background";
-import WorkspaceDiorama from "components/3d-workspace";
-import RocketBackground from "components/3d-rocket-background";
+import dynamic from "next/dynamic";
+import { useInView } from "framer-motion";
+
+const AnimatedBackground = dynamic(
+  () => import("components/3d-background/3d-background"),
+  { ssr: false },
+);
+const WorkspaceDiorama = dynamic(() => import("components/3d-workspace"), {
+  ssr: false,
+});
+const RocketBackground = dynamic(
+  () => import("components/3d-rocket-background"),
+  { ssr: false },
+);
+
+const InViewRender = ({ children }: { children: React.ReactNode }) => {
+  const ref = React.useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { margin: "400px" });
+
+  return (
+    <Box ref={ref} w="full" h="full">
+      {isInView && children}
+    </Box>
+  );
+};
 import { Box, Image, useBreakpointValue } from "@chakra-ui/react";
 
 // Differentiation Anchor: Floating Tech Icons in mid-layer
@@ -61,7 +83,9 @@ export default function Home() {
       <Parallax pages={totalPages} style={{ backgroundColor: "#1a202c" }}>
         {/* Layer 0: Global Background (Vanta) - Deepest layer */}
         <ParallaxLayer offset={0} speed={0} factor={totalPages}>
-          <AnimatedBackground />
+          <InViewRender>
+            <AnimatedBackground />
+          </InViewRender>
         </ParallaxLayer>
 
         {/* Second Background: 3D Workspace Diorama */}
@@ -71,7 +95,9 @@ export default function Home() {
           factor={isDesktop ? 1 : 6}
           style={{ zIndex: 0, opacity: 0.8 }}
         >
-          <WorkspaceDiorama />
+          <InViewRender>
+            <WorkspaceDiorama />
+          </InViewRender>
         </ParallaxLayer>
 
         {/* Third Background: Rocket Animation */}
@@ -81,7 +107,9 @@ export default function Home() {
           factor={isDesktop ? 1.5 : 2}
           style={{ zIndex: 0, opacity: 0.6 }}
         >
-          <RocketBackground />
+          <InViewRender>
+            <RocketBackground />
+          </InViewRender>
         </ParallaxLayer>
 
         {/* 
