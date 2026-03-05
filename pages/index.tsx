@@ -36,39 +36,6 @@ const InViewRender = ({ children }: { children: React.ReactNode }) => {
 };
 import { Box, Image, useBreakpointValue } from "@chakra-ui/react";
 
-// Differentiation Anchor: Floating Tech Icons in mid-layer
-const FloatingDecor = () => (
-  <>
-    <ParallaxLayer
-      offset={0.2}
-      speed={-0.1}
-      style={{ opacity: 0.1, pointerEvents: "none" }}
-    >
-      <Box position="absolute" right="10%" top="10%">
-        <Image src="/images/js-icon.svg" width="100px" alt="" />
-      </Box>
-    </ParallaxLayer>
-    <ParallaxLayer
-      offset={0.6}
-      speed={0.4}
-      style={{ opacity: 0.1, pointerEvents: "none" }}
-    >
-      <Box position="absolute" left="5%" top="20%">
-        <Image src="/images/react-icon.svg" width="150px" alt="" />
-      </Box>
-    </ParallaxLayer>
-    <ParallaxLayer
-      offset={1.2}
-      speed={0.2}
-      style={{ opacity: 0.1, pointerEvents: "none" }}
-    >
-      <Box position="absolute" right="5%" top="40%">
-        <Image src="/images/flutter_logo.svg" width="120px" alt="" />
-      </Box>
-    </ParallaxLayer>
-  </>
-);
-
 export default function Home() {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
   const totalPages = isDesktop ? 2 : 7;

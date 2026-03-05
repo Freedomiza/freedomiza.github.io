@@ -7,19 +7,16 @@ import {
   Text,
   Wrap,
   WrapItem,
-  Link,
-  Button,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import NLink from "next/link";
-import AnimatedBackground from "components/3d-background/3d-background";
-import Routes from "constants/routes";
 import profileImg from "public/images/profile.png";
 import ScrollButton from "../scroll-button";
 import TagSphere from "../tag-sphere";
 import TypeWriter from "../type-writer";
+import ContactButton from "../contact-button";
 
 import aboutMeJson from "public/json/about-me.json";
+import contactMeJson from "public/json/contact-me.json";
 import { ReactNode } from "react";
 
 const ProfileBox = ({ isDesktop }: { isDesktop: boolean }) => (
@@ -49,14 +46,18 @@ const ProfileBox = ({ isDesktop }: { isDesktop: boolean }) => (
           {aboutMeJson.summary}
         </Text>
 
-        <Box p="2"></Box>
-        <Center>
-          <NLink href={Routes.contact} passHref legacyBehavior>
-            <Button colorScheme="blue" as="a" size={isDesktop ? "md" : "sm"}>
-              Contact me!
-            </Button>
-          </NLink>
-        </Center>
+        <Box p="4" />
+        <Wrap justify="center" spacing={4}>
+          {contactMeJson.map((contact) => (
+            <WrapItem key={contact.id}>
+              <ContactButton
+                href={contact.href}
+                name={contact.name}
+                icon={contact.icon}
+              />
+            </WrapItem>
+          ))}
+        </Wrap>
       </Box>
     </VStack>
   </Center>
