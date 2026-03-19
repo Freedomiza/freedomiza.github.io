@@ -22,7 +22,7 @@ const SkillItem = React.forwardRef<HTMLDivElement, SkillItemProps>(
   ({ name, level, color, icon }: SkillItemProps, ref) => {
     return (
       <Center
-        minW="xs"
+        w="full"
         maxW="md"
         h="80px"
         bg="rgba(255, 255, 255, 0.05)"
@@ -42,17 +42,17 @@ const SkillItem = React.forwardRef<HTMLDivElement, SkillItemProps>(
             )}
           </Box>
 
-          <Box p="4">
+          <Box px="2">
             <Text fontWeight="bold" color="blue.200" textTransform="capitalize">
               {name}
             </Text>
           </Box>
           <Spacer />
-          <Center p="4">
+          <Center px="2">
             {Array(level)
               .fill("")
               .map((_, index) => (
-                <Center key={`star_${name}_${index}`} w="4" h="4" pr="3">
+                <Center key={`star_${name}_${index}`} w="4" h="4" pr="1">
                   <StarIcon color="yellow.400" />
                 </Center>
               ))}

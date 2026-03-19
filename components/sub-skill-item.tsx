@@ -14,7 +14,7 @@ const SubSkillItem = React.forwardRef<HTMLDivElement, SubSkillItemProps>(
   ({ name, level, color, icon, onPress }: SubSkillItemProps, ref) => {
     return (
       <Center
-        minW="xs"
+        w="full"
         maxW="md"
         minH="80px"
         bg="rgba(255, 255, 255, 0.03)"
@@ -44,17 +44,17 @@ const SubSkillItem = React.forwardRef<HTMLDivElement, SubSkillItemProps>(
             )}
           </Box>
 
-          <Box p="4">
+          <Box px="2">
             <Text fontWeight="medium" color="whiteAlpha.800">
               {name}
             </Text>
           </Box>
           <Spacer />
-          <Center p="4">
+          <Center px="2">
             {Array(level)
               .fill("")
               .map((_, index) => (
-                <Center key={`star_${name}_${index}`} w="4" h="4" pr="3">
+                <Center key={`star_${name}_${index}`} w="4" h="4" pr="1">
                   <StarIcon color="yellow.400" />
                 </Center>
               ))}

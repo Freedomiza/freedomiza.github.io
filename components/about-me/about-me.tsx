@@ -89,15 +89,17 @@ const AboutMe: React.FC = () => {
           <ProfileBox isDesktop={isDesktop} />
         </WrapItem>
         {isDesktop && (
-          <WrapItem>
-            <Box p="4" w="64"></Box>
-          </WrapItem>
+          <>
+            <WrapItem>
+              <Box p="4" w="64"></Box>
+            </WrapItem>
+            <WrapItem flex="1" minW="400px">
+              <Center w="full">
+                <TagSphere texts={texts} />
+              </Center>
+            </WrapItem>
+          </>
         )}
-        <WrapItem flex="1" minW={isDesktop ? "400px" : "100%"}>
-          <Center w="full">
-            <TagSphere texts={texts} />
-          </Center>
-        </WrapItem>
       </Wrap>
       <ScrollButton />
     </Center>
