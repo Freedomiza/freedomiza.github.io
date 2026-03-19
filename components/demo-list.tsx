@@ -31,6 +31,7 @@ const DemoList = ({ demos = [] }: { demos: DemoProps[] }) => {
                 justifyContent="center"
                 minW={{ base: "40px", md: "auto" }}
                 px={{ base: 2, md: 4 }}
+                iconSpacing={{ base: 0, md: 2 }}
                 leftIcon={
                   <Image
                     width="18px"
@@ -73,6 +74,7 @@ const DemoList = ({ demos = [] }: { demos: DemoProps[] }) => {
                 justifyContent="center"
                 minW={{ base: "40px", md: "auto" }}
                 px={{ base: 2, md: 4 }}
+                iconSpacing={{ base: 0, md: 2 }}
                 leftIcon={
                   <Image
                     width="18px"
@@ -114,6 +116,7 @@ const DemoList = ({ demos = [] }: { demos: DemoProps[] }) => {
                 justifyContent="center"
                 minW={{ base: "40px", md: "auto" }}
                 px={{ base: 2, md: 4 }}
+                iconSpacing={{ base: 0, md: 2 }}
                 leftIcon={
                   <Image
                     width="18px"

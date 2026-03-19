@@ -42,12 +42,24 @@ export default function ProjectItem({
             <Heading size={"md"} color="white" as="span">
               {project.name}
             </Heading>
-            <Img
-              src={project.icon}
-              alt={project.name}
-              width="32px"
-              height="32px"
-            />
+            <Box
+              w={project.iconWidth ?? "32px"}
+              h="32px"
+              bg={project.iconBgColor ?? "transparent"}
+              borderRadius="sm"
+              flexShrink={0}
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <Img
+                src={project.icon}
+                alt={project.name}
+                w={project.iconWidth ?? "32px"}
+                h="32px"
+                objectFit="contain"
+              />
+            </Box>
           </Flex>
           <Box pt={2}>
             <Text fontSize="md" color="whiteAlpha.900" fontWeight="medium">
@@ -65,7 +77,7 @@ export default function ProjectItem({
             <Box>
               {project.content.map((item) => (
                 <Text key={item} fontSize="sm" color="whiteAlpha.800" pb={1}>
-                  • {item}
+                  {item}
                 </Text>
               ))}
 

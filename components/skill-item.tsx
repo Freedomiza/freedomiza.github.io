@@ -24,7 +24,7 @@ const SkillItem = React.forwardRef<HTMLDivElement, SkillItemProps>(
       <Center
         w="full"
         maxW="md"
-        h="80px"
+        h="90px"
         bg="rgba(255, 255, 255, 0.05)"
         backdropFilter="blur(10px)"
         borderRadius="xl"
@@ -43,6 +43,9 @@ const SkillItem = React.forwardRef<HTMLDivElement, SkillItemProps>(
           </Box>
 
           <Box px="2">
+            <Text fontSize="xs" color="whiteAlpha.500" textTransform="uppercase" letterSpacing="wider">
+              Language
+            </Text>
             <Text fontWeight="bold" color="blue.200" textTransform="capitalize">
               {name}
             </Text>

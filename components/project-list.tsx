@@ -36,13 +36,26 @@ const ProjectList = ({ projects }: ProjectListProps) => {
           <VStack key={project.id}>
             <Box p="1" w="100%">
               <Flex alignContent={"center"} justifyItems={"center"}>
-                <Image
-                  src={project.icon}
-                  alt={project.name}
-                  width={project.iconWidth || 8}
+                <Box
+                  w={project.iconWidth || "32px"}
+                  h="32px"
                   bg={project.iconBgColor || "gray.100"}
+                  borderRadius="sm"
+                  overflow="hidden"
                   mr="4"
-                />
+                  flexShrink={0}
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  <Image
+                    src={project.icon}
+                    alt={project.name}
+                    w={project.iconWidth || "32px"}
+                    h="32px"
+                    objectFit="contain"
+                  />
+                </Box>
                 <Heading size="md" color={project.iconBgColor || "gray.100"}>
                   {project.name}
                 </Heading>
