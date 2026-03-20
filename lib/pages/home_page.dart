@@ -226,20 +226,20 @@ class _HomePageState extends State<HomePage>
             alignment: Alignment.center,
           ),
           // Color filter overlay — retro red tint
-          Container(
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  AppColors.primaryContainer.withValues(alpha: 0.25),
-                  AppColors.primaryContainer.withValues(alpha: 0.55),
-                  Colors.black.withValues(alpha: 0.75),
-                ],
-                stops: const [0.0, 0.5, 1.0],
-              ),
-            ),
-          ),
+          // Container(
+          //   decoration: BoxDecoration(
+          //     gradient: LinearGradient(
+          //       begin: Alignment.topCenter,
+          //       end: Alignment.bottomCenter,
+          //       colors: [
+          //         AppColors.primaryContainer.withValues(alpha: 0.25),
+          //         AppColors.primaryContainer.withValues(alpha: 0.55),
+          //         Colors.black.withValues(alpha: 0.75),
+          //       ],
+          //       stops: const [0.0, 0.5, 1.0],
+          //     ),
+          //   ),
+          // ),
           // Grid overlay
           CustomPaint(
             painter: _PortraitGridPainter(),
@@ -313,10 +313,13 @@ class _HomePageState extends State<HomePage>
               children: [
                 Expanded(child: _StatItem(value: '12+', label: 'YRS EXP')),
                 _VertDivider(),
-                Expanded(child: _StatItem(value: '48', label: 'PROJECTS')),
+                Expanded(
+                    child: _StatItem(
+                        value: _projects.length.toString() + '+',
+                        label: 'PROJECTS')),
                 _VertDivider(),
                 Expanded(
-                    child: _StatItem(value: 'iOS/AND', label: 'PLATFORMS')),
+                    child: _StatItem(value: 'iOS/AND/WEB', label: 'PLATFORMS')),
                 _VertDivider(),
                 Expanded(
                     child: _StatItem(
@@ -332,7 +335,10 @@ class _HomePageState extends State<HomePage>
                   children: [
                     Expanded(child: _StatItem(value: '12+', label: 'YRS EXP')),
                     _VertDivider(),
-                    Expanded(child: _StatItem(value: '48', label: 'PROJECTS')),
+                    Expanded(
+                        child: _StatItem(
+                            value: _projects.length.toString(),
+                            label: 'PROJECTS')),
                   ],
                 ),
                 const Divider(
@@ -693,7 +699,8 @@ class _ContactModal extends StatelessWidget {
         width: 360,
         decoration: BoxDecoration(
           color: AppColors.surfaceContainerLowest,
-          border: Border.all(color: AppColors.surfaceContainerHighest, width: 1),
+          border:
+              Border.all(color: AppColors.surfaceContainerHighest, width: 1),
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -780,8 +787,8 @@ class _ContactRowState extends State<_ContactRow> {
                 ? AppColors.surfaceContainerHigh
                 : Colors.transparent,
             border: const Border(
-              bottom: BorderSide(
-                  color: AppColors.surfaceContainerHigh, width: 1),
+              bottom:
+                  BorderSide(color: AppColors.surfaceContainerHigh, width: 1),
             ),
           ),
           child: Row(
@@ -831,9 +838,8 @@ class _ContactRowState extends State<_ContactRow> {
               Icon(
                 Icons.arrow_forward,
                 size: 14,
-                color: _isHovered
-                    ? AppColors.primary
-                    : AppColors.onSurfaceVariant,
+                color:
+                    _isHovered ? AppColors.primary : AppColors.onSurfaceVariant,
               ),
             ],
           ),
