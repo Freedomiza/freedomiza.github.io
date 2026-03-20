@@ -56,6 +56,8 @@ class Project {
   final String? imageUrl;
   final String? githubUrl;
   final String? liveUrl;
+  final String? iosUrl;
+  final String? androidUrl;
   final List<String> highlights;
 
   const Project({
@@ -76,6 +78,8 @@ class Project {
     this.imageUrl,
     this.githubUrl,
     this.liveUrl,
+    this.iosUrl,
+    this.androidUrl,
     required this.highlights,
   });
 
@@ -105,6 +109,8 @@ class Project {
       imageUrl: json['imageUrl'] as String?,
       githubUrl: json['githubUrl'] as String?,
       liveUrl: json['liveUrl'] as String?,
+      iosUrl: json['iosUrl'] as String?,
+      androidUrl: json['androidUrl'] as String?,
       highlights: (json['highlights'] as List<dynamic>?)
               ?.map((e) => e as String)
               .toList() ??

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../models/project.dart';
 import '../theme/app_theme.dart';
 
@@ -65,12 +67,27 @@ class _ProjectCardState extends State<ProjectCard> {
                   width: double.infinity,
                   color: AppColors.surfaceContainerLowest,
                   child: Stack(
+                    fit: StackFit.expand,
                     children: [
                       // Decorative grid background
                       CustomPaint(
                         painter: _GridPainter(),
                         child: const SizedBox.expand(),
                       ),
+                      // Project image
+                      if (widget.project.imageUrl != null)
+                        Padding(
+                          padding: const EdgeInsets.all(24),
+                          child: _ProjectImage(url: widget.project.imageUrl!),
+                        )
+                      else
+                        const Center(
+                          child: Icon(
+                            Icons.terminal,
+                            size: 40,
+                            color: AppColors.surfaceContainerHighest,
+                          ),
+                        ),
                       // Version badge
                       Positioned(
                         top: 12,
@@ -88,14 +105,6 @@ class _ProjectCardState extends State<ProjectCard> {
                               color: AppColors.onSurfaceVariant,
                             ),
                           ),
-                        ),
-                      ),
-                      // Center icon
-                      Center(
-                        child: Icon(
-                          Icons.terminal,
-                          size: 40,
-                          color: AppColors.surfaceContainerHighest,
                         ),
                       ),
                     ],
@@ -177,6 +186,9 @@ class _ProjectCardState extends State<ProjectCard> {
                             .toList(),
                       ),
                       const SizedBox(height: 12),
+                      // Demo links
+                      _DemoLinks(project: widget.project),
+                      const SizedBox(height: 8),
                       // Arrow
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -198,6 +210,83 @@ class _ProjectCardState extends State<ProjectCard> {
           ),
         ),
       ),
+    );
+  }
+}
+
+class _ProjectImage extends StatelessWidget {
+  final String url;
+
+  const _ProjectImage({required this.url});
+
+  @override
+  Widget build(BuildContext context) {
+    final ext = url.split('.').last.toLowerCase();
+    if (ext == 'svg') {
+      return SvgPicture.asset(url, fit: BoxFit.contain);
+    }
+    return Image.asset(url, fit: BoxFit.contain);
+  }
+}
+
+class _DemoLinks extends StatelessWidget {
+  final Project project;
+
+  const _DemoLinks({required this.project});
+
+  Future<void> _launch(String url) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final links = <({IconData icon, String label, String url})>[];
+    if (project.liveUrl != null)
+      links.add((icon: Icons.language, label: 'WEB', url: project.liveUrl!));
+    if (project.iosUrl != null)
+      links.add((icon: Icons.phone_iphone, label: 'IOS', url: project.iosUrl!));
+    if (project.androidUrl != null)
+      links.add((icon: Icons.android, label: 'AND', url: project.androidUrl!));
+    if (project.githubUrl != null)
+      links.add((icon: Icons.code, label: 'CODE', url: project.githubUrl!));
+
+    if (links.isEmpty) return const SizedBox.shrink();
+
+    return Row(
+      children: links.map((link) {
+        return Padding(
+          padding: const EdgeInsets.only(right: 6),
+          child: GestureDetector(
+            onTap: () => _launch(link.url),
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 4),
+              decoration: BoxDecoration(
+                border: Border.all(
+                    color: AppColors.surfaceContainerHighest, width: 1),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(link.icon, size: 10, color: AppColors.onSurfaceVariant),
+                  const SizedBox(width: 4),
+                  Text(
+                    link.label,
+                    style: GoogleFonts.spaceGrotesk(
+                      fontSize: 9,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 1,
+                      color: AppColors.onSurfaceVariant,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      }).toList(),
     );
   }
 }

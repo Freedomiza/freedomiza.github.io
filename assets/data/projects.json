@@ -21,6 +21,8 @@
     "imageUrl": "assets/images/elfie-logo.png",
     "githubUrl": null,
     "liveUrl": "https://elfie.co/",
+    "iosUrl": "https://apps.apple.com/vn/app/elfie-health-rewards/id1581530269",
+    "androidUrl": "https://play.google.com/store/apps/details?id=co.elfie.app",
     "highlights": [
       "Implemented HealthKit and Google Health Connect integration for cross-platform health data sync.",
       "Developed native iOS and Android integrations alongside Flutter core.",
@@ -49,6 +51,8 @@
     "imageUrl": "assets/images/pq_splash.png",
     "githubUrl": null,
     "liveUrl": "https://pulsetcm.sg/",
+    "iosUrl": "https://apps.apple.com/gb/app/pq-by-pulse/id1632837912",
+    "androidUrl": "https://play.google.com/apps/internaltest/4701721738436047861",
     "highlights": [
       "Built real-time chat system for direct clinician-patient communication.",
       "Integrated PQ Index tracking and online video consultation features.",
@@ -77,6 +81,8 @@
     "imageUrl": "assets/images/transwap-logo.png",
     "githubUrl": null,
     "liveUrl": "https://transwap.com/",
+    "iosUrl": "https://apps.apple.com/app/id1564013302",
+    "androidUrl": "https://play.google.com/store/apps/details?id=com.transwap.luna",
     "highlights": [
       "Led mobile development for international currency exchange platform scaling to global markets.",
       "Implemented real-time transaction tracking and multi-currency support.",
@@ -105,6 +111,8 @@
     "imageUrl": "assets/images/hywallet-icon.png",
     "githubUrl": null,
     "liveUrl": null,
+    "iosUrl": "https://testflight.apple.com/join/liAZ19kC",
+    "androidUrl": "https://install.appcenter.ms/orgs/hywallet/apps/hywallet/distribution_groups/sandbox",
     "highlights": [
       "Built cross-platform wallet interface for DeFi money transfers.",
       "Integrated Firebase for real-time balance and transaction updates."
