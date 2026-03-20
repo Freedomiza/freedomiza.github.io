@@ -1,0 +1,73 @@
+[
+  {
+    "id": "elfie",
+    "level": "LVL_05",
+    "levelColor": "primary",
+    "period": "MAR 2024 - JAN 2026",
+    "title": "Senior Flutter Developer",
+    "company": "Elfie Health",
+    "techTags": ["FLUTTER", "HEALTHKIT", "GOOGLE HEALTH CONNECT", "FIREBASE"],
+    "highlights": [
+      "Implemented HealthKit and Google Health Connect integration for cross-platform health data sync.",
+      "Developed native iOS and Android integrations alongside Flutter core.",
+      "Researched and evaluated new technologies to continuously improve the app ecosystem.",
+      "Maintaining and expanding core codebase for 500k+ user healthcare platform."
+    ]
+  },
+  {
+    "id": "yuan-tcm",
+    "level": "LVL_04",
+    "levelColor": "secondary",
+    "period": "NOV 2022 - JUL 2023",
+    "title": "Mobile Lead",
+    "company": "YUAN TCM WELLNESS",
+    "techTags": ["FLUTTER", "AUTH0", "CODEMAGIC", "AZURE"],
+    "highlights": [
+      "Led mobile development for clinician booking platform with real-time chat.",
+      "Integrated PQ Index tracking and online consultation features.",
+      "Deployed via CodeMagic CI/CD pipeline to iOS App Store and Google Play."
+    ]
+  },
+  {
+    "id": "transwap",
+    "level": "LVL_03",
+    "levelColor": "tertiary",
+    "period": "JUL 2020 - MAY 2023",
+    "title": "Mobile Lead",
+    "company": "TransSwap",
+    "techTags": ["FLUTTER", "FIREBASE", "APPCENTER", "AZURE"],
+    "highlights": [
+      "Led mobile development for international currency exchange platform scaling to global markets.",
+      "Implemented real-time transaction tracking and multi-currency support.",
+      "Deployed to both iOS App Store and Google Play via AppCenter CI/CD."
+    ]
+  },
+  {
+    "id": "launchdeck",
+    "level": "LVL_02",
+    "levelColor": "secondary",
+    "period": "DEC 2019 - MAY 2020",
+    "title": "Senior Frontend Developer",
+    "company": "Launchdeck LLC",
+    "techTags": ["REACT", "NEXTJS", "REDUX", "PHP"],
+    "highlights": [
+      "Built full-stack food truck marketplace (Go Truckster) with Next.js SSR.",
+      "Developed offline-first roof waste calculation app (Restoration AI) with dynamic report generation.",
+      "Delivered two production web applications as a remote contractor."
+    ]
+  },
+  {
+    "id": "business4you",
+    "level": "LVL_01",
+    "levelColor": "outline",
+    "period": "JUN 2018 - DEC 2019",
+    "title": "Senior Frontend Developer",
+    "company": "Business4You",
+    "techTags": ["REACT", "REDUX", "LARAVEL"],
+    "highlights": [
+      "Built offline-capable digital product catalog for Essilor — global ophthalmic optics company.",
+      "Integrated with Laravel backend for real-time product data management.",
+      "Delivered multi-region deployment for global distribution network."
+    ]
+  }
+]

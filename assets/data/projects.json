@@ -1,0 +1,225 @@
+[
+  {
+    "id": "elfie",
+    "title": "ELFIE",
+    "subtitle": "DIGITAL HEALTH & REWARDS PLATFORM",
+    "version": "v2.0.0",
+    "category": "HEALTHCARE / FLUTTER",
+    "status": "MISSION: COMPLETED",
+    "statusColor": "primary",
+    "techTags": ["FLUTTER", "HEALTHKIT", "GOOGLE HEALTH CONNECT", "FIREBASE"],
+    "description": "Elfie is a free digital health app designed to motivate users to monitor and improve their health by offering rewards for healthy behaviours. Combines health tracking with gamification to support users in managing chronic conditions.",
+    "quote": "Gamifying health to drive daily engagement and lasting behavioural change.",
+    "features": [],
+    "stats": {
+      "performance": 95,
+      "scalability": 90,
+      "architecture": 88
+    },
+    "duration": "22 MONTHS",
+    "stakes": "HIGH",
+    "imageUrl": "assets/images/elfie-logo.png",
+    "githubUrl": null,
+    "liveUrl": "https://elfie.co/",
+    "highlights": [
+      "Implemented HealthKit and Google Health Connect integration for cross-platform health data sync.",
+      "Developed native iOS and Android integrations alongside Flutter core.",
+      "Researched and evaluated new technologies to continuously improve the app ecosystem."
+    ]
+  },
+  {
+    "id": "pulse-tcm",
+    "title": "PULSE TCM",
+    "subtitle": "CLINICIAN BOOKING PLATFORM",
+    "version": "v1.0.0",
+    "category": "HEALTHCARE / FLUTTER",
+    "status": "MISSION: COMPLETED",
+    "statusColor": "secondary",
+    "techTags": ["FLUTTER", "AUTH0", "CODEMAGIC", "AZURE"],
+    "description": "Clinician Booking App enabling direct chat with clinicians, PQ Index tracking, and online consultations — eliminating the need to visit a clinic in person.",
+    "quote": "Bringing the clinic to the patient, one tap at a time.",
+    "features": [],
+    "stats": {
+      "performance": 88,
+      "scalability": 82,
+      "architecture": 85
+    },
+    "duration": "9 MONTHS",
+    "stakes": "HIGH",
+    "imageUrl": "assets/images/pq_splash.png",
+    "githubUrl": null,
+    "liveUrl": "https://pulsetcm.sg/",
+    "highlights": [
+      "Built real-time chat system for direct clinician-patient communication.",
+      "Integrated PQ Index tracking and online video consultation features.",
+      "Deployed via CodeMagic CI/CD pipeline to iOS App Store and Google Play."
+    ]
+  },
+  {
+    "id": "transwap",
+    "title": "TRANSWAP",
+    "subtitle": "GLOBAL MONEY TRANSFER PLATFORM",
+    "version": "v1.0.0",
+    "category": "FINTECH / FLUTTER",
+    "status": "MISSION: COMPLETED",
+    "statusColor": "primary",
+    "techTags": ["FLUTTER", "FIREBASE", "APPCENTER", "AZURE"],
+    "description": "Flutter mobile app for moving money between countries — simplifying global finance with effortless international transfers and real-time transaction tracking.",
+    "quote": "Simplifying global finance, one transfer at a time.",
+    "features": [],
+    "stats": {
+      "performance": 90,
+      "scalability": 92,
+      "architecture": 87
+    },
+    "duration": "34 MONTHS",
+    "stakes": "HIGH",
+    "imageUrl": "assets/images/transwap-logo.png",
+    "githubUrl": null,
+    "liveUrl": "https://transwap.com/",
+    "highlights": [
+      "Led mobile development for international currency exchange platform scaling to global markets.",
+      "Implemented real-time transaction tracking and multi-currency support.",
+      "Deployed to both iOS App Store and Google Play via AppCenter CI/CD."
+    ]
+  },
+  {
+    "id": "hywallet",
+    "title": "HYWALLET",
+    "subtitle": "DEFI PAYMENT WALLET",
+    "version": "v1.0.0",
+    "category": "FINTECH / FLUTTER",
+    "status": "MISSION: COMPLETED",
+    "statusColor": "secondary",
+    "techTags": ["FLUTTER", "FIREBASE", "APPCENTER", "AZURE"],
+    "description": "Flutter mobile wallet app for sending and receiving money with DeFi capabilities — making decentralized finance accessible for everyday global transfers.",
+    "quote": "DeFi made accessible for everyday transactions.",
+    "features": [],
+    "stats": {
+      "performance": 85,
+      "scalability": 80,
+      "architecture": 82
+    },
+    "duration": "3 MONTHS",
+    "stakes": "MEDIUM",
+    "imageUrl": "assets/images/hywallet-icon.png",
+    "githubUrl": null,
+    "liveUrl": null,
+    "highlights": [
+      "Built cross-platform wallet interface for DeFi money transfers.",
+      "Integrated Firebase for real-time balance and transaction updates."
+    ]
+  },
+  {
+    "id": "hubble-map",
+    "title": "HUBBLE MAP",
+    "subtitle": "REALTIME CONSTRUCTION TRACKING",
+    "version": "v1.0.0",
+    "category": "ENTERPRISE / REACT",
+    "status": "MISSION: COMPLETED",
+    "statusColor": "secondary",
+    "techTags": ["REACT", "REDUX", "SOCKETIO", "ANTD", "AUTODESK FORGE SDK"],
+    "description": "Realtime web app for tracking worker locations in construction sites, monitoring overall construction progress, and tracing and rectifying defects.",
+    "quote": "Real-time visibility over complex construction environments.",
+    "features": [],
+    "stats": {
+      "performance": 88,
+      "scalability": 80,
+      "architecture": 85
+    },
+    "duration": "3 MONTHS",
+    "stakes": "HIGH",
+    "imageUrl": "assets/images/hubble-icon.svg",
+    "githubUrl": null,
+    "liveUrl": "https://maps-dev.hubble.sg/",
+    "highlights": [
+      "Built real-time worker location tracking using SocketIO.",
+      "Integrated Autodesk Forge SDK for 3D construction site visualization.",
+      "Implemented defect tracking and rectification workflow for site managers."
+    ]
+  },
+  {
+    "id": "restoration-ai",
+    "title": "RESTORATION AI",
+    "subtitle": "ROOF WASTE CALCULATION ENGINE",
+    "version": "v1.0.0",
+    "category": "ENTERPRISE / REACT",
+    "status": "MISSION: COMPLETED",
+    "statusColor": "secondary",
+    "techTags": ["REACT", "REDUX", "PHP", "OFFLINE STORAGE"],
+    "description": "Roof waste calculation web app providing supplement information for tracking current budget, with email notifications and dynamic report generation tools.",
+    "quote": "Precision calculations for restoration contractors.",
+    "features": [],
+    "stats": {
+      "performance": 82,
+      "scalability": 78,
+      "architecture": 80
+    },
+    "duration": "6 MONTHS",
+    "stakes": "MEDIUM",
+    "imageUrl": "assets/images/restoration-ai.png",
+    "githubUrl": null,
+    "liveUrl": "https://app.restorationai.com",
+    "highlights": [
+      "Built offline-first React app for roof waste estimation with local storage sync.",
+      "Implemented dynamic PDF report generation with automated email notifications.",
+      "Integrated real-time budget tracking with supplement data dashboards."
+    ]
+  },
+  {
+    "id": "essilor",
+    "title": "ESSILOR CATALOG",
+    "subtitle": "DIGITAL OPHTHALMIC PRODUCT SHOWCASE",
+    "version": "v1.0.0",
+    "category": "ENTERPRISE / REACT",
+    "status": "MISSION: COMPLETED",
+    "statusColor": "outline",
+    "techTags": ["REACT", "REDUX", "LARAVEL", "OFFLINE STORAGE"],
+    "description": "Digital catalog for Essilor — a French-based international ophthalmic optics company that designs, manufactures and markets lenses to correct or protect eyesight.",
+    "quote": "Digitizing product catalogs for global optical distribution.",
+    "features": [],
+    "stats": {
+      "performance": 85,
+      "scalability": 80,
+      "architecture": 82
+    },
+    "duration": "18 MONTHS",
+    "stakes": "MEDIUM",
+    "imageUrl": "assets/images/essilor-logo-vector.png",
+    "githubUrl": null,
+    "liveUrl": "https://webox-212807.appspot.com/",
+    "highlights": [
+      "Built offline-capable digital product catalog with Redux state management.",
+      "Integrated with Laravel backend for real-time product data management.",
+      "Delivered multi-region deployment for global ophthalmic distribution network."
+    ]
+  },
+  {
+    "id": "go-truckster",
+    "title": "GO TRUCKSTER",
+    "subtitle": "FOOD TRUCK SERVING PLATFORM",
+    "version": "v1.0.0",
+    "category": "PLATFORM / NEXTJS",
+    "status": "MISSION: COMPLETED",
+    "statusColor": "outline",
+    "techTags": ["NEXTJS", "REACT", "REDUX", "PHP", "ANTD"],
+    "description": "Foodtruck serving platform connecting truck owners and customers — enabling truck discovery, ordering, and location tracking for the modern food truck ecosystem.",
+    "quote": "Connecting food trucks and hungry customers at scale.",
+    "features": [],
+    "stats": {
+      "performance": 80,
+      "scalability": 78,
+      "architecture": 80
+    },
+    "duration": "6 MONTHS",
+    "stakes": "MEDIUM",
+    "imageUrl": "assets/images/truckster.png",
+    "githubUrl": null,
+    "liveUrl": "https://gotruckster.com/",
+    "highlights": [
+      "Built full-stack food truck marketplace with Next.js SSR for SEO performance.",
+      "Implemented real-time truck location tracking for customer-facing discovery.",
+      "Integrated Ant Design component library for rapid, consistent UI development."
+    ]
+  }
+]

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KHOA LE | LEVEL_01</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "surface-variant": "#353535",
+                "on-secondary-container": "#003c55",
+                "primary": "#ffb4aa",
+                "inverse-surface": "#e2e2e2",
+                "on-surface": "#e2e2e2",
+                "surface-bright": "#393939",
+                "on-primary-container": "#fff5f3",
+                "on-tertiary-container": "#f8f6f6",
+                "on-error-container": "#ffdad6",
+                "secondary-container": "#00abec",
+                "tertiary": "#c7c6c6",
+                "secondary-fixed-dim": "#82cfff",
+                "surface-container-lowest": "#0e0e0e",
+                "on-primary": "#690003",
+                "on-tertiary-fixed-variant": "#464747",
+                "on-tertiary": "#2f3031",
+                "outline": "#af8782",
+                "secondary-fixed": "#c6e7ff",
+                "on-secondary-fixed-variant": "#004c6b",
+                "on-error": "#690005",
+                "surface-dim": "#131313",
+                "on-primary-fixed": "#410001",
+                "background": "#131313",
+                "surface-container-high": "#2a2a2a",
+                "primary-fixed-dim": "#ffb4aa",
+                "surface-container-highest": "#353535",
+                "tertiary-container": "#717171",
+                "on-primary-fixed-variant": "#930006",
+                "surface-container-low": "#1b1b1b",
+                "secondary": "#82cfff",
+                "primary-container": "#e4000f",
+                "inverse-primary": "#c0000b",
+                "surface-container": "#1f1f1f",
+                "tertiary-fixed": "#e3e2e2",
+                "error": "#ffb4ab",
+                "error-container": "#93000a",
+                "on-background": "#e2e2e2",
+                "on-surface-variant": "#e9bcb6",
+                "outline-variant": "#5e3f3a",
+                "surface": "#131313",
+                "on-tertiary-fixed": "#1b1c1c",
+                "inverse-on-surface": "#303030",
+                "tertiary-fixed-dim": "#c7c6c6",
+                "surface-tint": "#ffb4aa",
+                "primary-fixed": "#ffdad5",
+                "on-secondary": "#00344b",
+                "on-secondary-fixed": "#001e2d"
+              },
+              fontFamily: {
+                "headline": ["Space Grotesk"],
+                "body": ["Space Grotesk"],
+                "label": ["Space Grotesk"]
+              },
+              borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "0px"},
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-start {
+            transition-timing-function: steps(4, end);
+        }
+        .crt-scanline {
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-[100] bg-[#131313]">
+<div class="flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#e4000f]" data-icon="videogame_asset">videogame_asset</span>
+<h1 class="font-space-grotesk font-black text-xl text-[#e4000f] tracking-tighter uppercase">LEVEL_01</h1>
+</div>
+<div class="font-space-grotesk font-bold uppercase tracking-widest text-[#ffb4aa]">
+                HI-SCORE: 9999
+            </div>
+</div>
+<div class="h-1 w-full bg-[#1b1b1b]"></div>
+</header>
+<main class="relative min-h-screen pt-20 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- CRT Overlay effect -->
+<div class="fixed inset-0 crt-scanline z-50 opacity-20 pointer-events-none"></div>
+<!-- Hero Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12 items-end">
+<div class="md:col-span-8">
+<div class="inline-block bg-secondary-container px-3 py-1 mb-4">
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] text-on-secondary-container">SENIOR MOBILE DEVELOPER</span>
+</div>
+<h2 class="text-5xl md:text-8xl font-black font-headline leading-[0.9] tracking-tighter uppercase mb-6">
+                    KHOA <span class="text-primary">LE</span>
+</h2>
+<p class="text-lg text-tertiary max-w-xl uppercase tracking-wider font-medium leading-relaxed">
+                    Architecting high-performance mobile ecosystems with bit-perfect precision. Expert in Swift, Kotlin, and Flutter frameworks.
+                </p>
+</div>
+<div class="md:col-span-4 flex justify-end">
+<div class="relative group">
+<div class="absolute -inset-2 bg-primary-container opacity-20"></div>
+<img alt="Pixel Art Style Portrait" class="w-64 h-64 object-cover filter grayscale brightness-75 contrast-125 border-4 border-surface-container-highest" data-alt="Retro 8-bit style portrait of a developer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiLr6DSmHORANxo0KtSlwv5NbtFs1wUMHYhiUFKqoHfGLcXrt6HP1YwTB5WBrXs1NlZ7EHhv_UudzJrqtbRw-Z7JEqLsvjpC979tKZjJvsupFZhoF7p1PNZc2nJ__H5jEgIG7uwLrtpkyA119xpIneLSVSJSCT53k44NbUoOwdH4zt3KkKhUnJ6Av462kOBHGH7kmtaKVKJI77QJKVGwcBau0F4vEcQORt9jVqQKIi4Jisly2Y0vvB5XTGX20Ll_DEqqKedUotP9U"/>
+<div class="absolute bottom-0 left-0 bg-primary-container text-on-primary-container px-4 py-2 font-bold uppercase text-xs">
+                        PLAYER_01 [KHOA]
+                    </div>
+</div>
+</div>
+</section>
+<!-- Bento HUD Stats -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+<div class="bg-surface-container-low p-6 flex flex-col justify-between border-b-4 border-surface-container-highest">
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest mb-4">EXPERIENCE</span>
+<div>
+<div class="text-3xl font-black">12+ YRS</div>
+<div class="w-full h-2 bg-surface-container-highest mt-2">
+<div class="h-full bg-secondary w-[85%]"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 flex flex-col justify-between border-b-4 border-surface-container-highest">
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest mb-4">PROJECTS</span>
+<div>
+<div class="text-3xl font-black">48 COMPLETED</div>
+<span class="text-[10px] font-medium text-tertiary mt-2 block">ALL STAGES CLEAR</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 flex flex-col justify-between border-b-4 border-surface-container-highest">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-4">PLATFORMS</span>
+<div>
+<div class="text-3xl font-black">IOS / ANDROID</div>
+<div class="flex gap-1 mt-2">
+<div class="w-3 h-3 bg-primary"></div>
+<div class="w-3 h-3 bg-secondary"></div>
+<div class="w-3 h-3 bg-tertiary"></div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 flex flex-col justify-between border-b-4 border-surface-container-highest">
+<span class="text-[10px] font-bold text-secondary-fixed-dim uppercase tracking-widest mb-4">STATUS</span>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 bg-green-500 animate-pulse"></div>
+<div class="text-2xl font-black uppercase">AVAILABLE</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="mb-16">
+<div class="bg-primary-container p-1 group cursor-pointer active:translate-y-1 step-start">
+<div class="border-4 border-on-primary-container bg-primary-container p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="text-center md:text-left">
+<h3 class="text-4xl font-black text-on-primary-container uppercase tracking-tighter mb-2">READY TO PLAY?</h3>
+<p class="text-on-primary-container/80 uppercase font-bold text-sm tracking-widest">START A NEW PROJECT JOURNEY WITH ME</p>
+</div>
+<button class="bg-on-primary-container text-primary-container px-10 py-5 font-black text-2xl uppercase flex items-center gap-4 hover:bg-white transition-colors">
+                        PRESS START
+                        <span class="material-symbols-outlined font-black" data-icon="play_arrow">play_arrow</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Work Grid -->
+<section class="mb-12">
+<div class="flex justify-between items-end mb-8 border-b-4 border-surface-container-low pb-4">
+<h3 class="text-2xl font-black uppercase tracking-tighter">SELECT MISSION</h3>
+<span class="text-secondary font-bold text-xs uppercase tracking-[0.3em]">REF_DATABASE: 2024</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Project 01 -->
+<div class="bg-surface-container-high group cursor-pointer overflow-hidden border-2 border-transparent hover:border-secondary transition-colors">
+<div class="aspect-video bg-surface-container-highest relative">
+<img alt="Mobile Fintech Project" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Screenshot of a fintech mobile application" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2tmJy1v0P6ibPt_zdXK1zmP9OwdRmhQnemIK2DRS3M0nOwl4coVhIMJwAGgsT1CQw7Ie8jYp8Yyy4EZrkKQYZ6sRQ7BBV3kRtiVWYUPHegji_FsD7ZWCESyzcv4hOVdMpYbic8XiLd5kMFrfBP6A9ZlL6uP6IIMj3fJbGjAychNgJa5PUPJolOKhFCpBCbWi5pPwYdhAnh4kxrdWisc9bO5o3t1NnlVjyHKBxG6pgPXELJlHOMUDhzDNzYaWRhwSz-go2oCLGauY"/>
+<div class="absolute top-4 right-4 bg-secondary text-on-secondary-container px-2 py-1 text-[10px] font-black uppercase">
+                            MISSION: COMPLETED
+                        </div>
+</div>
+<div class="p-6">
+<div class="text-[10px] font-bold text-secondary uppercase mb-2 tracking-widest">FINTECH / IOS</div>
+<h4 class="text-xl font-black uppercase mb-4">NEOBANK CORE UI</h4>
+<div class="flex justify-between items-center">
+<span class="text-xs text-tertiary uppercase font-bold tracking-wider">SWIFTUI / COMBINE</span>
+<span class="material-symbols-outlined text-secondary" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Project 02 -->
+<div class="bg-surface-container-high group cursor-pointer overflow-hidden border-2 border-transparent hover:border-primary transition-colors">
+<div class="aspect-video bg-surface-container-highest relative">
+<img alt="Social Media App" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity" data-alt="Abstract interface of a social mobile app" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrzlkcls3y49lKNod2vhJm9d2ECUUXqglQSrB3LsM80IDidf6CR0UnYtXB49RhdZB7tCOIWMaqejiRApZFROCzfwyk6qLxKioIuRBdCd3hUqOVdBFNyvAMtmCh83tBLn0FZauSn8Bry-J03sSoXqq5CSXw3ICEHDXws1k58lhyYRQPSf7lR9x2MitjqMahgh6A1qGewEkPDegH5JJQXF_zvJA_qzp5VeC00pAg8Lxccn4UiwCo8p33RAe-bpZwT_bRiRAsGhNmR0I"/>
+<div class="absolute top-4 right-4 bg-primary text-on-primary-container px-2 py-1 text-[10px] font-black uppercase">
+                            MISSION: LIVE
+                        </div>
+</div>
+<div class="p-6">
+<div class="text-[10px] font-bold text-primary uppercase mb-2 tracking-widest">SOCIAL / ANDROID</div>
+<h4 class="text-xl font-black uppercase mb-4">STREAMFLOW ARCH</h4>
+<div class="flex justify-between items-center">
+<span class="text-xs text-tertiary uppercase font-bold tracking-wider">KOTLIN / JETPACK</span>
+<span class="material-symbols-outlined text-primary" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Project 03 -->
+<div class="bg-surface-container-high group cursor-pointer overflow-hidden border-2 border-transparent hover:border-on-surface transition-colors">
+<div class="aspect-video bg-surface-container-highest relative">
+<div class="w-full h-full flex items-center justify-center bg-surface-container-lowest">
+<span class="material-symbols-outlined text-6xl text-surface-container-highest" data-icon="lock">lock</span>
+</div>
+<div class="absolute top-4 right-4 bg-surface-container-highest text-tertiary px-2 py-1 text-[10px] font-black uppercase">
+                            MISSION: HIDDEN
+                        </div>
+</div>
+<div class="p-6 opacity-50">
+<div class="text-[10px] font-bold text-tertiary uppercase mb-2 tracking-widest">ENTERPRISE / CORE</div>
+<h4 class="text-xl font-black uppercase mb-4">ENCRYPTED VAULT</h4>
+<div class="flex justify-between items-center">
+<span class="text-xs text-tertiary uppercase font-bold tracking-wider">SECURITY / C++</span>
+<span class="material-symbols-outlined" data-icon="lock">lock</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#1b1b1b] border-t-4 border-[#2a2a2a]">
+<div class="flex justify-around items-center px-4 pb-2 h-20">
+<!-- Active Tab: HOME -->
+<a class="flex flex-col items-center justify-center bg-[#e4000f] text-[#131313] p-2 w-full h-full scale-100 active:translate-y-0.5 step-start transition-none" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-space-grotesk text-[10px] font-bold uppercase tracking-widest mt-1">HOME</span>
+</a>
+<!-- Inactive Tab: WORK -->
+<a class="flex flex-col items-center justify-center text-[#c7c6c6] p-2 w-full h-full hover:bg-[#353535] active:translate-y-0.5 step-start transition-none" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<span class="font-space-grotesk text-[10px] font-bold uppercase tracking-widest mt-1">WORK</span>
+</a>
+<!-- Inactive Tab: TECH -->
+<a class="flex flex-col items-center justify-center text-[#c7c6c6] p-2 w-full h-full hover:bg-[#353535] active:translate-y-0.5 step-start transition-none" href="#">
+<span class="material-symbols-outlined" data-icon="memory">memory</span>
+<span class="font-space-grotesk text-[10px] font-bold uppercase tracking-widest mt-1">TECH</span>
+</a>
+<!-- Inactive Tab: LABS -->
+<a class="flex flex-col items-center justify-center text-[#c7c6c6] p-2 w-full h-full hover:bg-[#353535] active:translate-y-0.5 step-start transition-none" href="#">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+<span class="font-space-grotesk text-[10px] font-bold uppercase tracking-widest mt-1">LABS</span>
+</a>
+</div>
+</nav>
+<!-- Floating Decor -->
+<div class="fixed top-24 right-0 pointer-events-none opacity-10 hidden lg:block">
+<div class="text-[12rem] font-black text-white leading-none tracking-tighter uppercase select-none rotate-90 origin-right">
+            PLAYER_ONE
+        </div>
+</div>
+</body></html>

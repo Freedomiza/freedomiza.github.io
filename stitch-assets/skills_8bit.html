@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LEVEL_01 - SKILLS INVENTORY</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#353535",
+              "on-secondary-container": "#003c55",
+              "primary": "#ffb4aa",
+              "inverse-surface": "#e2e2e2",
+              "on-surface": "#e2e2e2",
+              "surface-bright": "#393939",
+              "on-primary-container": "#fff5f3",
+              "on-tertiary-container": "#f8f6f6",
+              "on-error-container": "#ffdad6",
+              "secondary-container": "#00abec",
+              "tertiary": "#c7c6c6",
+              "secondary-fixed-dim": "#82cfff",
+              "surface-container-lowest": "#0e0e0e",
+              "on-primary": "#690003",
+              "on-tertiary-fixed-variant": "#464747",
+              "on-tertiary": "#2f3031",
+              "outline": "#af8782",
+              "secondary-fixed": "#c6e7ff",
+              "on-secondary-fixed-variant": "#004c6b",
+              "on-error": "#690005",
+              "surface-dim": "#131313",
+              "on-primary-fixed": "#410001",
+              "background": "#131313",
+              "surface-container-high": "#2a2a2a",
+              "primary-fixed-dim": "#ffb4aa",
+              "surface-container-highest": "#353535",
+              "tertiary-container": "#717171",
+              "on-primary-fixed-variant": "#930006",
+              "surface-container-low": "#1b1b1b",
+              "secondary": "#82cfff",
+              "primary-container": "#e4000f",
+              "inverse-primary": "#c0000b",
+              "surface-container": "#1f1f1f",
+              "tertiary-fixed": "#e3e2e2",
+              "error": "#ffb4ab",
+              "error-container": "#93000a",
+              "on-background": "#e2e2e2",
+              "on-surface-variant": "#e9bcb6",
+              "outline-variant": "#5e3f3a",
+              "surface": "#131313",
+              "on-tertiary-fixed": "#1b1c1c",
+              "inverse-on-surface": "#303030",
+              "tertiary-fixed-dim": "#c7c6c6",
+              "surface-tint": "#ffb4aa",
+              "primary-fixed": "#ffdad5",
+              "on-secondary": "#00344b",
+              "on-secondary-fixed": "#001e2d"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Space Grotesk"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "0px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .step-start { transition-timing-function: steps(4, end); }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Scanline Effect */
+        .crt-overlay {
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container overflow-x-hidden min-h-screen">
+<!-- TopAppBar -->
+<nav class="sticky top-0 z-50 bg-[#131313] flex justify-between items-center w-full px-6 py-4 border-0">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#e4000f]" data-icon="videogame_asset">videogame_asset</span>
+<span class="text-xl font-black text-[#e4000f] tracking-tighter font-headline uppercase">LEVEL_01</span>
+</div>
+<div class="bg-[#1b1b1b] px-4 py-1">
+<span class="font-space-grotesk font-bold uppercase tracking-widest text-[#ffb4aa] text-sm">HI-SCORE: 9999</span>
+</div>
+</nav>
+<main class="relative px-6 pt-8 pb-32 max-w-5xl mx-auto">
+<!-- CRT Overlay for flavor -->
+<div class="fixed inset-0 crt-overlay z-[60] opacity-20"></div>
+<!-- Header Section -->
+<header class="mb-12 relative">
+<div class="inline-block bg-primary-container text-on-primary-container px-2 py-1 mb-2 font-bold text-xs tracking-[0.2em] uppercase">
+                STATUS: ACTIVE_PLAYER
+            </div>
+<h1 class="text-5xl md:text-7xl font-extrabold uppercase tracking-tighter leading-none mb-4">
+                SKILLS <br/>
+<span class="text-primary">INVENTORY</span>
+</h1>
+<div class="h-1 w-24 bg-primary-container"></div>
+</header>
+<!-- Bento Grid Inventory Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Skill Slot: Flutter -->
+<div class="md:col-span-8 bg-surface-container-low p-6 flex flex-col gap-6 relative group border-0">
+<div class="absolute top-0 right-0 p-3 opacity-20 group-hover:opacity-100 transition-none">
+<span class="text-[10px] font-bold tracking-widest uppercase">SLOT_01</span>
+</div>
+<div class="flex flex-col md:flex-row gap-6 items-start">
+<div class="w-24 h-24 bg-surface-container-highest flex items-center justify-center p-4 border-4 border-primary-container">
+<span class="material-symbols-outlined text-5xl text-primary" data-icon="flutter" style="font-variation-settings: 'FILL' 1;">flutter</span>
+</div>
+<div class="flex-1 w-full">
+<div class="flex justify-between items-end mb-2">
+<h2 class="text-2xl font-bold uppercase tracking-widest">Flutter &amp; Dart</h2>
+<span class="text-primary font-black text-xl">LVL 99</span>
+</div>
+<!-- Health Bar Style Progress -->
+<div class="h-8 bg-surface-container-highest w-full p-1">
+<div class="h-full bg-primary-container flex items-center justify-end px-3 w-[99%]">
+<span class="text-[10px] font-bold text-on-primary-container tracking-widest">MAXED</span>
+</div>
+</div>
+<p class="mt-4 text-tertiary text-sm leading-relaxed max-w-xl">
+                            ARCHITECT-LEVEL COMPETENCY IN MULTI-PLATFORM DEVELOPMENT. CAPABLE OF RENDERING 60FPS UI AT SCALE.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Side Metadata / Stats Card -->
+<div class="md:col-span-4 bg-surface-container-high p-6 border-0 flex flex-col justify-between">
+<div>
+<h3 class="text-xs font-bold tracking-[0.3em] uppercase mb-4 text-secondary">EQUIPMENT_STATS</h3>
+<ul class="space-y-4">
+<li class="flex justify-between text-xs">
+<span class="text-tertiary">STRENGTH</span>
+<span class="font-bold">255/255</span>
+</li>
+<li class="flex justify-between text-xs">
+<span class="text-tertiary">AGILITY</span>
+<span class="font-bold">180/255</span>
+</li>
+<li class="flex justify-between text-xs">
+<span class="text-tertiary">INTELLECT</span>
+<span class="font-bold">240/255</span>
+</li>
+</ul>
+</div>
+<div class="mt-8">
+<div class="bg-surface-container-highest p-4 flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="memory">memory</span>
+<div class="text-[10px] font-bold tracking-widest uppercase">
+                            SYSTEM_CORE: ONLINE
+                        </div>
+</div>
+</div>
+</div>
+<!-- Skill Slot: Javascript -->
+<div class="md:col-span-6 bg-surface-container-low p-6 flex flex-col gap-4 border-0 hover:bg-surface-container-high transition-none">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-surface" data-icon="javascript" style="font-variation-settings: 'FILL' 1;">javascript</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<h3 class="font-bold uppercase tracking-wider">Javascript</h3>
+<span class="text-secondary font-bold">LVL 80</span>
+</div>
+<div class="h-4 bg-surface-container-highest mt-2 p-0.5">
+<div class="h-full bg-secondary w-[80%]"></div>
+</div>
+</div>
+</div>
+<p class="text-[11px] text-tertiary uppercase leading-tight">DOM MANIPULATION, ES6+, AND ASYNC PROTOCOLS ENGAGED.</p>
+</div>
+<!-- Skill Slot: TypeScript -->
+<div class="md:col-span-6 bg-surface-container-low p-6 flex flex-col gap-4 border-0 hover:bg-surface-container-high transition-none">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-surface" data-icon="code" style="font-variation-settings: 'FILL' 1;">code</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center">
+<h3 class="font-bold uppercase tracking-wider">TypeScript</h3>
+<span class="text-secondary font-bold">LVL 75</span>
+</div>
+<div class="h-4 bg-surface-container-highest mt-2 p-0.5">
+<div class="h-full bg-secondary w-[75%]"></div>
+</div>
+</div>
+</div>
+<p class="text-[11px] text-tertiary uppercase leading-tight">STRICT TYPING AND INTERFACE ARCHITECTURE PROTOCOLS LOADED.</p>
+</div>
+<!-- Skill Slot: React Native -->
+<div class="md:col-span-12 bg-surface-container-low p-6 flex flex-col md:flex-row gap-6 border-0 group active:translate-y-1 transition-none">
+<div class="flex items-center gap-4 md:w-1/3">
+<div class="w-16 h-16 bg-surface-container-highest flex items-center justify-center border-2 border-primary">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="smartphone">smartphone</span>
+</div>
+<div>
+<h3 class="text-xl font-bold uppercase tracking-wider">React Native</h3>
+<div class="text-primary font-black">LVL 70</div>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-center">
+<div class="h-6 bg-surface-container-highest p-1 mb-2">
+<div class="h-full bg-primary-container w-[70%]"></div>
+</div>
+<div class="flex justify-between text-[10px] font-bold tracking-[0.2em] uppercase text-tertiary">
+<span>XP: 7000/10000</span>
+<span>NEXT UPGRADE: BRIDGE MODULES</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Inventory Footer Decor -->
+<div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-surface-container-lowest h-16 border-2 border-surface-container-highest flex items-center justify-center text-tertiary/20">
+<span class="material-symbols-outlined text-4xl" data-icon="inventory_2">inventory_2</span>
+</div>
+<div class="bg-surface-container-lowest h-16 border-2 border-surface-container-highest flex items-center justify-center text-tertiary/20">
+<span class="material-symbols-outlined text-4xl" data-icon="token">token</span>
+</div>
+<div class="bg-surface-container-lowest h-16 border-2 border-surface-container-highest flex items-center justify-center text-tertiary/20">
+<span class="material-symbols-outlined text-4xl" data-icon="verified">verified</span>
+</div>
+<div class="bg-surface-container-lowest h-16 border-2 border-surface-container-highest flex items-center justify-center text-tertiary/20">
+<span class="material-symbols-outlined text-4xl" data-icon="category">category</span>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-2 bg-[#1b1b1b] z-50 border-t-4 border-[#2a2a2a] h-20">
+<a class="flex flex-col items-center justify-center text-[#c7c6c6] p-2 hover:bg-[#353535] transition-none active:translate-y-0.5 step-start" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-space-grotesk text-[10px] font-bold uppercase tracking-widest">HOME</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#e4000f] text-[#131313] p-2 scale-100 transition-none active:translate-y-0.5 step-start" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="terminal">terminal</span>
+<span class="font-space-grotesk text-[10px] font-bold uppercase tracking-widest">WORK</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c7c6c6] p-2 hover:bg-[#353535] transition-none active:translate-y-0.5 step-start" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="memory">memory</span>
+<span class="font-space-grotesk text-[10px] font-bold uppercase tracking-widest">TECH</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c7c6c6] p-2 hover:bg-[#353535] transition-none active:translate-y-0.5 step-start" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="biotech">biotech</span>
+<span class="font-space-grotesk text-[10px] font-bold uppercase tracking-widest">LABS</span>
+</a>
+</nav>
+<!-- FAB Suppression: Screen represents a detail/focused screen, but maintaining minimal HUD action -->
+<div class="fixed bottom-24 right-6 z-[70] hidden md:block">
+<button class="bg-primary-container text-on-primary-container p-4 font-bold shadow-none active:translate-y-1 step-start border-b-4 border-on-primary">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+</body></html>

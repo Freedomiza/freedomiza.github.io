@@ -1,0 +1,262 @@
+[
+  {
+    "id": "flutter",
+    "name": "Flutter & Dart",
+    "icon": "flutter_dash",
+    "level": 99,
+    "levelLabel": "LVL 99",
+    "category": "primary",
+    "isFeatured": true,
+    "description": "ARCHITECT-LEVEL COMPETENCY IN MULTI-PLATFORM DEVELOPMENT. CAPABLE OF RENDERING 60FPS UI AT SCALE.",
+    "stats": {
+      "strength": 255,
+      "agility": 180,
+      "intellect": 240
+    },
+    "projects": [
+      {
+        "id": "13",
+        "name": "Elfie",
+        "icon": "/images/elfie-logo.png",
+        "description": "Company: Elfie Health",
+        "date": "March 2024 - January 2026",
+        "content": [
+          "Role: Mobile Developer • March 2024 - January 2026",
+          "Elfie is a free digital health app designed to motivate users to monitor and improve their health by offering rewards for healthy behaviours. It combines health tracking with gamification to support users in managing chronic conditions and adopting healthier lifestyles.",
+          "- Implement and manage HealthKit and Google Health Connect integration",
+          "- Native side (iOS, Android) integration",
+          "- Develop new features",
+          "- Researching and evaluating new technologies for the app",
+          "- Maintaining code base"
+        ],
+        "tech": ["Flutter", "HealthKit", "Google Health Connect", "Firebase"],
+        "demo": {
+          "web": "https://elfie.co/",
+          "ios": "https://apps.apple.com/vn/app/elfie-health-rewards/id1581530269",
+          "android": "https://play.google.com/store/apps/details?id=co.elfie.app"
+        }
+      },
+      {
+        "id": "10",
+        "name": "PULSE TCM",
+        "icon": "/images/pq_splash.png",
+        "description": "Company: YUAN TCM WELLNESS PTE. LTD.",
+        "date": "November 2022 - July 2023",
+        "content": [
+          "Role: Mobile Lead • July 2020 - Today",
+          "Clinician Booking App",
+          "- Directly chat with clinician for diagnosing",
+          "- Checking your PQ Index",
+          "- Have online meeting with your clinician without going to clinic"
+        ],
+        "tech": ["Flutter", "Auth0", "CodeMagic", "Azure"],
+        "demo": {
+          "web": "https://pulsetcm.sg/",
+          "ios": "https://apps.apple.com/gb/app/pq-by-pulse/id1632837912",
+          "android": "https://play.google.com/apps/internaltest/4701721738436047861"
+        }
+      },
+      {
+        "id": "11",
+        "name": "Transwap",
+        "icon": "/images/transwap-logo.png",
+        "description": "Company: Transwap",
+        "date": "July 2020 - May 2023",
+        "content": [
+          "Role: Mobile Lead • July 2020 - Today",
+          "Flutter Mobile App for move money between countries",
+          "- Simplifying Global Finance",
+          "- Transfer money to any country effortlessly",
+          "- Tracking transaction easily"
+        ],
+        "tech": ["Flutter", "Firebase", "AppCenter", "Azure"],
+        "demo": {
+          "web": "https://transwap.com/",
+          "ios": "https://apps.apple.com/app/id1564013302",
+          "android": "https://play.google.com/store/apps/details?id=com.transwap.luna"
+        }
+      },
+      {
+        "id": "12",
+        "name": "HyWallet",
+        "icon": "/images/hywallet-icon.png",
+        "description": "Company: HYDEFI PTE. LTD",
+        "date": "October 2021 - December 2021",
+        "content": [
+          "Role: Mobile Lead • October 2021 - Today",
+          "Flutter Mobile App for send and receive money",
+          "- Simplifying Global Finance",
+          "- Transfer money to any country effortlessly",
+          "- Tracking transaction easily"
+        ],
+        "tech": ["Flutter", "Firebase", "AppCenter", "Azure"],
+        "demo": {
+          "ios": "https://testflight.apple.com/join/liAZ19kC",
+          "android": "https://install.appcenter.ms/orgs/hywallet/apps/hywallet/distribution_groups/sandbox"
+        }
+      }
+    ]
+  },
+  {
+    "id": "react",
+    "name": "React",
+    "icon": "web",
+    "level": 88,
+    "levelLabel": "LVL 88",
+    "category": "primary",
+    "isFeatured": true,
+    "description": "COMPONENT-DRIVEN UI ARCHITECTURE WITH REDUX STATE MANAGEMENT AND HOOKS PROTOCOLS ENGAGED.",
+    "stats": {
+      "strength": 210,
+      "agility": 195,
+      "intellect": 205
+    },
+    "projects": [
+      {
+        "id": "1",
+        "name": "Hubble Map Realtime Web App",
+        "icon": "/images/hubble-icon.svg",
+        "description": "Freelancer Job",
+        "date": "January 2020 - March 2020",
+        "content": [
+          "Senior React Frontend Developer • January 2020 - March 2020",
+          "Website for:",
+          "- Tracking worker realtime location in a construction site",
+          "- Tracking overall construction process",
+          "- Tracing and rectify defect"
+        ],
+        "tech": ["php", "React Redux", "SocketIO", "Antd", "Autodesk Forge SDK"],
+        "demo": {
+          "web": "https://maps-dev.hubble.sg/"
+        }
+      },
+      {
+        "id": "2",
+        "name": "Restoration Ai",
+        "icon": "/images/restoration-ai.png",
+        "description": "Remote Job - Launchdeck LLC",
+        "date": "December 2019 - May 2020",
+        "content": [
+          "Senior React Frontend Developer • December 2019 - May 2020",
+          "Roof waste calculation web app, provide user with supplement information for tracking current budget, with email notification and dynamic report generation tools"
+        ],
+        "tech": ["php", "React Redux", "Offline First Storage"],
+        "demo": {
+          "web": "https://app.restorationai.com"
+        }
+      },
+      {
+        "id": "3",
+        "name": "Essilor Digital Catalog",
+        "icon": "/images/essilor-logo-vector.png",
+        "description": "Fulltime Job - Business4You",
+        "date": "June 2018 - December 2019",
+        "content": [
+          "Senior React Frontend Developer • June 2018 - December 2019",
+          "Essilor is a French-based international ophthalmic optics company that designs, manufactures and markets lenses to correct or protect eyesight."
+        ],
+        "tech": ["Lavarel", "React", "Redux", "Offline Storage"],
+        "demo": {
+          "web": "https://webox-212807.appspot.com/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "nextjs",
+    "name": "Next.js",
+    "icon": "web",
+    "level": 82,
+    "levelLabel": "LVL 82",
+    "category": "secondary",
+    "isFeatured": false,
+    "description": "SSR AND STATIC GENERATION PROTOCOLS ACTIVE. SEO-OPTIMIZED FULL-STACK RENDERING MODULES LOADED.",
+    "projects": [
+      {
+        "id": "21",
+        "name": "Go Truckster",
+        "icon": "/images/truckster.png",
+        "description": "Remote Job - Launchdeck LLC",
+        "date": "December 2019 - May 2020",
+        "content": [
+          "Senior React Frontend Developer • December 2019 - May 2020",
+          "Foodtruck serving platform for trucks owner and customer alike"
+        ],
+        "tech": ["php", "React + Nextjs", "Redux", "Antd"],
+        "demo": {
+          "web": "https://gotruckster.com/"
+        }
+      }
+    ]
+  },
+  {
+    "id": "swift",
+    "name": "Swift / SwiftUI",
+    "icon": "phone_iphone",
+    "level": 80,
+    "levelLabel": "LVL 80",
+    "category": "secondary",
+    "isFeatured": false,
+    "description": "NATIVE IOS DEVELOPMENT WITH SWIFTUI AND UIKIT PROTOCOLS ENGAGED."
+  },
+  {
+    "id": "kotlin",
+    "name": "Kotlin / Jetpack",
+    "icon": "android",
+    "level": 78,
+    "levelLabel": "LVL 78",
+    "category": "secondary",
+    "isFeatured": false,
+    "description": "NATIVE ANDROID DEVELOPMENT WITH JETPACK COMPOSE MODULES LOADED."
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "icon": "code",
+    "level": 82,
+    "levelLabel": "LVL 82",
+    "category": "secondary",
+    "isFeatured": false,
+    "description": "STRICT TYPING AND INTERFACE ARCHITECTURE PROTOCOLS LOADED."
+  },
+  {
+    "id": "javascript",
+    "name": "JavaScript",
+    "icon": "code",
+    "level": 88,
+    "levelLabel": "LVL 88",
+    "category": "secondary",
+    "isFeatured": false,
+    "description": "DOM MANIPULATION, ES6+, AND ASYNC PROTOCOLS ENGAGED."
+  },
+  {
+    "id": "nodejs",
+    "name": "Node.js",
+    "icon": "dns",
+    "level": 72,
+    "levelLabel": "LVL 72",
+    "category": "secondary",
+    "isFeatured": false,
+    "description": "SERVER-SIDE JAVASCRIPT RUNTIME WITH REST API AND MICROSERVICE MODULES ACTIVE."
+  },
+  {
+    "id": "angular",
+    "name": "Angular",
+    "icon": "web",
+    "level": 70,
+    "levelLabel": "LVL 70",
+    "category": "secondary",
+    "isFeatured": false,
+    "description": "ENTERPRISE-GRADE SPA FRAMEWORK WITH RXJS REACTIVE STREAM PROTOCOLS LOADED."
+  },
+  {
+    "id": "react-native",
+    "name": "React Native",
+    "icon": "smartphone",
+    "level": 75,
+    "levelLabel": "LVL 75",
+    "category": "secondary",
+    "isFeatured": false,
+    "description": "CROSS-PLATFORM MOBILE DEVELOPMENT WITH BRIDGE MODULE EXPERTISE."
+  }
+]

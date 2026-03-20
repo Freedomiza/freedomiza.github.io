@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LEVEL_01 | EXPERIENCE_LOG</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#353535",
+                        "on-secondary-container": "#003c55",
+                        "primary": "#ffb4aa",
+                        "inverse-surface": "#e2e2e2",
+                        "on-surface": "#e2e2e2",
+                        "surface-bright": "#393939",
+                        "on-primary-container": "#fff5f3",
+                        "on-tertiary-container": "#f8f6f6",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#00abec",
+                        "tertiary": "#c7c6c6",
+                        "secondary-fixed-dim": "#82cfff",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary": "#690003",
+                        "on-tertiary-fixed-variant": "#464747",
+                        "on-tertiary": "#2f3031",
+                        "outline": "#af8782",
+                        "secondary-fixed": "#c6e7ff",
+                        "on-secondary-fixed-variant": "#004c6b",
+                        "on-error": "#690005",
+                        "surface-dim": "#131313",
+                        "on-primary-fixed": "#410001",
+                        "background": "#131313",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed-dim": "#ffb4aa",
+                        "surface-container-highest": "#353535",
+                        "tertiary-container": "#717171",
+                        "on-primary-fixed-variant": "#930006",
+                        "surface-container-low": "#1b1b1b",
+                        "secondary": "#82cfff",
+                        "primary-container": "#e4000f",
+                        "inverse-primary": "#c0000b",
+                        "surface-container": "#1f1f1f",
+                        "tertiary-fixed": "#e3e2e2",
+                        "error": "#ffb4ab",
+                        "error-container": "#93000a",
+                        "on-background": "#e2e2e2",
+                        "on-surface-variant": "#e9bcb6",
+                        "outline-variant": "#5e3f3a",
+                        "surface": "#131313",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "inverse-on-surface": "#303030",
+                        "tertiary-fixed-dim": "#c7c6c6",
+                        "surface-tint": "#ffb4aa",
+                        "primary-fixed": "#ffdad5",
+                        "on-secondary": "#00344b",
+                        "on-secondary-fixed": "#001e2d"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Space Grotesk"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "0px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pixel-grid {
+            background-image: linear-gradient(#1b1b1b 1px, transparent 1px), linear-gradient(90deg, #1b1b1b 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .step-start {
+            transition-timing-function: steps(4, end);
+        }
+        /* Override border radius for 8-bit look */
+        * { border-radius: 0 !important; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-[#131313] fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#e4000f]" data-icon="videogame_asset">videogame_asset</span>
+<h1 class="font-space-grotesk font-black text-xl text-[#e4000f] tracking-tighter uppercase">LEVEL_01</h1>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<nav class="flex gap-6">
+<a class="font-space-grotesk font-bold uppercase tracking-widest text-[#c7c6c6] hover:bg-[#2a2a2a] px-3 py-1 transition-none" href="#">HOME</a>
+<a class="font-space-grotesk font-bold uppercase tracking-widest text-[#ffb4aa] bg-[#2a2a2a] px-3 py-1 transition-none" href="#">WORK</a>
+<a class="font-space-grotesk font-bold uppercase tracking-widest text-[#c7c6c6] hover:bg-[#2a2a2a] px-3 py-1 transition-none" href="#">TECH</a>
+<a class="font-space-grotesk font-bold uppercase tracking-widest text-[#c7c6c6] hover:bg-[#2a2a2a] px-3 py-1 transition-none" href="#">LABS</a>
+</nav>
+</div>
+<div class="font-space-grotesk font-bold uppercase tracking-widest text-[#ffb4aa] bg-[#1b1b1b] px-4 py-1 border-r-4 border-b-4 border-surface-variant">
+            HI-SCORE: 9999
+        </div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto pixel-grid min-h-screen">
+<!-- Hero Section / Title -->
+<section class="mb-16">
+<div class="inline-block bg-primary-container text-on-primary-container px-4 py-2 mb-4">
+<span class="font-label text-xs font-bold tracking-[0.2em]">WORLD_02 // CAREER_PATH</span>
+</div>
+<h2 class="text-5xl md:text-7xl font-headline font-black uppercase tracking-tighter leading-none mb-4">
+                EXPERIENCE<br/><span class="text-primary">TIMELINE</span>
+</h2>
+<div class="w-24 h-4 bg-secondary"></div>
+</section>
+<!-- Experience Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+<!-- Timeline Sidebar (Desktop Only) -->
+<div class="hidden md:flex md:col-span-1 flex-col items-center gap-0">
+<div class="w-1 h-12 bg-surface-container-highest"></div>
+<div class="w-8 h-8 bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="w-1 h-48 bg-surface-container-highest"></div>
+<div class="w-8 h-8 bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="radio_button_checked">radio_button_checked</span>
+</div>
+<div class="w-1 h-48 bg-surface-container-highest"></div>
+<div class="w-8 h-8 bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="radio_button_checked">radio_button_checked</span>
+</div>
+<div class="w-1 h-48 bg-surface-container-highest"></div>
+<div class="w-8 h-8 bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="check_circle">check_circle</span>
+</div>
+<div class="w-1 h-12 bg-surface-container-highest"></div>
+</div>
+<!-- Content Area -->
+<div class="md:col-span-11 space-y-12">
+<!-- Level 04: Elfie Mobile App -->
+<div class="group relative bg-surface-container-low p-8 border-l-8 border-primary-container hover:bg-surface-container-high transition-none active:translate-y-1 step-start">
+<div class="absolute -top-4 -right-4 bg-primary-container text-on-primary-container px-6 py-2 font-bold tracking-widest text-lg shadow-[8px_8px_0px_0px_#131313]">
+                        LVL_04
+                    </div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+<div>
+<span class="font-label text-secondary font-bold tracking-widest text-xs uppercase mb-2 block">MAR 2024 - JAN 2026</span>
+<h3 class="text-3xl font-headline font-bold uppercase tracking-tight">Senior Flutter Developer</h3>
+<p class="text-xl text-tertiary font-bold uppercase">Elfie Mobile App</p>
+</div>
+<div class="flex gap-2">
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-bold tracking-widest uppercase text-on-surface">FLUTTER</span>
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-bold tracking-widest uppercase text-on-surface">DART</span>
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-bold tracking-widest uppercase text-on-surface">FIREBASE</span>
+</div>
+</div>
+<ul class="space-y-3 text-on-surface-variant font-medium">
+<li class="flex items-start gap-3">
+<span class="text-primary-container font-black">»</span>
+<span>Architected core mobile infrastructure for multi-platform healthcare solution scaling to 500k+ users.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-primary-container font-black">»</span>
+<span>Optimized rendering engine reducing frame drops by 40% on low-end Android devices.</span>
+</li>
+</ul>
+</div>
+<!-- Level 03: Odontogram -->
+<div class="group relative bg-surface-container-low p-8 border-l-8 border-secondary-container hover:bg-surface-container-high transition-none active:translate-y-1 step-start">
+<div class="absolute -top-4 -right-4 bg-secondary-container text-white px-6 py-2 font-bold tracking-widest text-lg shadow-[8px_8px_0px_0px_#131313]">
+                        LVL_03
+                    </div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+<div>
+<span class="font-label text-secondary font-bold tracking-widest text-xs uppercase mb-2 block">AUG 2020 - DEC 2021</span>
+<h3 class="text-3xl font-headline font-bold uppercase tracking-tight">Mobile Engineer Lead</h3>
+<p class="text-xl text-tertiary font-bold uppercase">Odontogram</p>
+</div>
+<div class="flex gap-2">
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-bold tracking-widest uppercase text-on-surface">KOTLIN</span>
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-bold tracking-widest uppercase text-on-surface">SWIFT</span>
+<span class="bg-surface-container-highest px-3 py-1 text-[10px] font-bold tracking-widest uppercase text-on-surface">GRPC</span>
+</div>
+</div>
+<ul class="space-y-3 text-on-surface-variant font-medium">
+<li class="flex items-start gap-3">
+<span class="text-secondary-container font-black">»</span>
+<span>Led a cross-functional team of 6 developers in building a dental imaging mobile suite.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-secondary-container font-black">»</span>
+<span>Implemented custom OpenGL shaders for real-time 3D teeth mapping.</span>
+</li>
+</ul>
+</div>
+<!-- Level 02: Pulse TCM -->
+<div class="group relative bg-surface-container-low p-8 border-l-8 border-tertiary-container hover:bg-surface-container-high transition-none active:translate-y-1 step-start">
+<div class="absolute -top-4 -right-4 bg-tertiary-container text-white px-6 py-2 font-bold tracking-widest text-lg shadow-[8px_8px_0px_0px_#131313]">
+                        LVL_02
+                    </div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+<div>
+<span class="font-label text-secondary font-bold tracking-widest text-xs uppercase mb-2 block">JUN 2019 - JUL 2020</span>
+<h3 class="text-3xl font-headline font-bold uppercase tracking-tight">Cross-Platform Developer</h3>
+<p class="text-xl text-tertiary font-bold uppercase">Pulse TCM</p>
+</div>
+</div>
+<ul class="space-y-3 text-on-surface-variant font-medium">
+<li class="flex items-start gap-3">
+<span class="text-tertiary-container font-black">»</span>
+<span>Developed integrated medical appointment systems using React Native and Node.js.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="text-tertiary-container font-black">»</span>
+<span>Streamlined patient intake flow, reducing registration time by 65%.</span>
+</li>
+</ul>
+</div>
+<!-- Level 01: TransSwap -->
+<div class="group relative bg-surface-container-low p-8 border-l-8 border-outline-variant hover:bg-surface-container-high transition-none active:translate-y-1 step-start">
+<div class="absolute -top-4 -right-4 bg-outline-variant text-white px-6 py-2 font-bold tracking-widest text-lg shadow-[8px_8px_0px_0px_#131313]">
+                        LVL_01
+                    </div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+<div>
+<span class="font-label text-secondary font-bold tracking-widest text-xs uppercase mb-2 block">JAN 2018 - MAY 2019</span>
+<h3 class="text-3xl font-headline font-bold uppercase tracking-tight">Mobile App Specialist</h3>
+<p class="text-xl text-tertiary font-bold uppercase">TransSwap</p>
+</div>
+</div>
+<p class="text-on-surface-variant font-medium italic">
+                        Initial quest: Bootstrapped the first version of the currency exchange platform for international markets.
+                    </p>
+</div>
+</div>
+</div>
+<!-- Achievement Section (Bento Style) -->
+<section class="mt-24 grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="bg-surface-container-highest p-6 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-2" data-icon="trophy" style="font-variation-settings: 'FILL' 1;">trophy</span>
+<span class="font-label text-[10px] font-black uppercase text-secondary">ACHIEVEMENT_UNLOCKED</span>
+<p class="font-headline font-bold uppercase text-sm mt-2">10+ APPS DEPLOYED</p>
+</div>
+<div class="bg-surface-container-highest p-6 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-2" data-icon="group" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-label text-[10px] font-black uppercase text-secondary">FACTION_BONUS</span>
+<p class="font-headline font-bold uppercase text-sm mt-2">LEADERSHIP_SKILL +50</p>
+</div>
+<div class="bg-surface-container-highest p-6 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-2" data-icon="terminal" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span class="font-label text-[10px] font-black uppercase text-secondary">CORE_MODULES</span>
+<p class="font-headline font-bold uppercase text-sm mt-2">FLUTTER_EXPERT</p>
+</div>
+<div class="bg-surface-container-highest p-6 flex flex-col items-center justify-center text-center border-4 border-dashed border-outline-variant">
+<span class="material-symbols-outlined text-4xl text-outline-variant mb-2" data-icon="lock">lock</span>
+<span class="font-label text-[10px] font-black uppercase text-outline-variant">LOCKED_CONTENT</span>
+<p class="font-headline font-bold uppercase text-sm mt-2 text-outline-variant">FUTURE_ROLE</p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-2 bg-[#1b1b1b] border-t-4 border-[#2a2a2a] z-50">
+<a class="flex flex-col items-center justify-center text-[#c7c6c6] p-2 hover:bg-[#353535] transition-none active:translate-y-0.5 step-start" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-space-grotesk text-[10px] font-bold uppercase tracking-widest">HOME</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#e4000f] text-[#131313] p-2 scale-100 transition-none active:translate-y-0.5 step-start" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<span class="font-space-grotesk text-[10px] font-bold uppercase tracking-widest">WORK</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c7c6c6] p-2 hover:bg-[#353535] transition-none active:translate-y-0.5 step-start" href="#">
+<span class="material-symbols-outlined" data-icon="memory">memory</span>
+<span class="font-space-grotesk text-[10px] font-bold uppercase tracking-widest">TECH</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c7c6c6] p-2 hover:bg-[#353535] transition-none active:translate-y-0.5 step-start" href="#">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+<span class="font-space-grotesk text-[10px] font-bold uppercase tracking-widest">LABS</span>
+</a>
+</nav>
+</body></html>
