@@ -15,12 +15,12 @@
     ]
   },
   {
-    "id": "yuan-tcm",
+    "id": "pulse-tcm",
     "level": "LVL_04",
     "levelColor": "secondary",
     "period": "NOV 2022 - JUL 2023",
     "title": "Mobile Lead",
-    "company": "YUAN TCM WELLNESS",
+    "company": "PULSE TCM WELLNESS",
     "techTags": ["FLUTTER", "AUTH0", "CODEMAGIC", "AZURE"],
     "highlights": [
       "Led mobile development for clinician booking platform with real-time chat.",
@@ -34,7 +34,7 @@
     "levelColor": "tertiary",
     "period": "JUL 2020 - MAY 2023",
     "title": "Mobile Lead",
-    "company": "TransSwap",
+    "company": "TranSwap",
     "techTags": ["FLUTTER", "FIREBASE", "APPCENTER", "AZURE"],
     "highlights": [
       "Led mobile development for international currency exchange platform scaling to global markets.",
@@ -69,5 +69,38 @@
       "Integrated with Laravel backend for real-time product data management.",
       "Delivered multi-region deployment for global distribution network."
     ]
+  },
+  {
+    "id": "logix-technology",
+    "level": "LVL_00",
+    "levelColor": "outline",
+    "period": "MAR 2016 - MAY 2018",
+    "title": "Software Developer",
+    "company": "Logix Technology",
+    "techTags": [],
+    "highlights": []
+  },
+  {
+    "id": "xspera",
+    "level": "LVL_00",
+    "levelColor": "outline",
+    "period": "JAN 2015 - MAR 2016",
+    "title": "Software Engineer",
+    "company": "Xspera Ltd",
+    "techTags": ["SHAREPOINT", "WCF", "ANGULARJS", "BOOTSTRAP"],
+    "highlights": [
+      "As a Sharepoint Dev: developing backend WCFs services, SharePoint list, publishing sites, master pages for portal.",
+      "As a semi Frontend Dev: developing single page App for Portal using clientside framework like AngularJs, Bootstrap."
+    ]
+  },
+  {
+    "id": "csc",
+    "level": "LVL_00",
+    "levelColor": "outline",
+    "period": "FEB 2013 - DEC 2014",
+    "title": "Software Engineer",
+    "company": "CSC",
+    "techTags": [],
+    "highlights": ["Coder"]
   }
 ]

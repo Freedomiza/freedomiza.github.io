@@ -40,7 +40,7 @@
         "id": "10",
         "name": "PULSE TCM",
         "icon": "/images/pq_splash.png",
-        "description": "Company: YUAN TCM WELLNESS PTE. LTD.",
+        "description": "Company: PULSE TCM WELLNESS PTE. LTD.",
         "date": "November 2022 - July 2023",
         "content": [
           "Role: Mobile Lead • July 2020 - Today",
@@ -125,7 +125,13 @@
           "- Tracking overall construction process",
           "- Tracing and rectify defect"
         ],
-        "tech": ["php", "React Redux", "SocketIO", "Antd", "Autodesk Forge SDK"],
+        "tech": [
+          "php",
+          "React Redux",
+          "SocketIO",
+          "Antd",
+          "Autodesk Forge SDK"
+        ],
         "demo": {
           "web": "https://maps-dev.hubble.sg/"
         }
@@ -247,7 +253,23 @@
     "levelLabel": "LVL 70",
     "category": "secondary",
     "isFeatured": false,
-    "description": "ENTERPRISE-GRADE SPA FRAMEWORK WITH RXJS REACTIVE STREAM PROTOCOLS LOADED."
+    "description": "ENTERPRISE-GRADE SPA FRAMEWORK WITH RXJS REACTIVE STREAM PROTOCOLS LOADED.",
+    "projects": [
+      {
+        "id": "41",
+        "name": "Xspera Portal",
+        "icon": null,
+        "description": "Company: Xspera Ltd",
+        "date": "January 2015 - March 2016",
+        "content": [
+          "Software Engineer • January 2015 - March 2016",
+          "- As a Sharepoint Dev: developing backend WCFs services, SharePoint list, publishing sites, master pages for portal",
+          "- As a semi Frontend Dev: developing single page App for Portal using clientside framework like AngularJs, Bootstrap."
+        ],
+        "tech": ["SharePoint", "WCF", "AngularJS", "Bootstrap"],
+        "demo": {}
+      }
+    ]
   },
   {
     "id": "react-native",

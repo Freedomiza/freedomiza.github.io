@@ -31,7 +31,7 @@
         "id": "10",
         "name": "PULSE TCM",
         "icon": "/images/pq_splash.png",
-        "description": "Company: YUAN TCM WELLNESS PTE. LTD.",
+        "description": "Company: PULSE TCM WELLNESS PTE. LTD.",
         "date": "November 2022 - July 2023",
         "content": [
           "Role: Mobile Lead • July 2020 - Today",
@@ -111,6 +111,59 @@
         "demo": {
           "web": "https://gotruckster.com/"
         }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Angular",
+    "icon": "images/angular-icon.png",
+    "level": 3,
+    "projects": [
+      {
+        "id": "41",
+        "name": "Xspera Portal",
+        "icon": null,
+        "description": "Company: Xspera Ltd",
+        "date": "January 2015 - March 2016",
+        "content": [
+          "Software Engineer • January 2015 - March 2016",
+          "- As a Sharepoint Dev: developing backend WCFs services, SharePoint list, publishing sites, master pages for portal",
+          "- As a semi Frontend Dev: developing single page App for Portal using clientside framework like AngularJs, Bootstrap."
+        ],
+        "tech": ["SharePoint", "WCF", "AngularJS", "Bootstrap"],
+        "demo": {}
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Other",
+    "icon": null,
+    "level": 2,
+    "projects": [
+      {
+        "id": "51",
+        "name": "Logix Technology",
+        "icon": null,
+        "description": "Company: Logix Technology",
+        "date": "March 2016 - May 2018",
+        "content": ["Software Developer • March 2016 - May 2018"],
+        "tech": [],
+        "demo": {}
+      },
+      {
+        "id": "52",
+        "name": "CSC",
+        "icon": null,
+        "description": "Company: CSC",
+        "date": "February 2013 - December 2014",
+        "content": [
+          "Software Engineer • February 2013 - December 2014",
+          "Coder"
+        ],
+        "tech": [],
+        "demo": {}
       }
     ]
   },

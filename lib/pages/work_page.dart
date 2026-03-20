@@ -141,22 +141,22 @@ class _WorkPageState extends State<WorkPage> {
       _AchievementData(
         icon: Icons.people_outline,
         title: 'TEAM LEADER',
-        desc: 'LED 6+ DEVELOPER TEAMS',
+        desc: 'HERDED 4+ ANIMALS',
       ),
       _AchievementData(
         icon: Icons.flash_on_outlined,
         title: 'PERFORMANCE',
-        desc: '40% FRAME DROP REDUCTION',
+        desc: 'BLAMED BACKEND FOR 40% LESS LAG',
       ),
       _AchievementData(
         icon: Icons.bar_chart_outlined,
         title: 'SCALE',
-        desc: '500K+ USER PLATFORMS',
+        desc: '500K+ USERS, 0 EXPLANATIONS',
       ),
       _AchievementData(
         icon: Icons.verified_outlined,
         title: 'CERTIFIED',
-        desc: 'HIPAA & MULTI-PLATFORM',
+        desc: 'STACK OVERFLOW CERTIFIED NOOB',
       ),
     ];
 
@@ -200,8 +200,7 @@ class _WorkPageState extends State<WorkPage> {
             runSpacing: 12,
             children: achievements
                 .map((a) => SizedBox(
-                      width:
-                          (MediaQuery.of(context).size.width - 48 - 12) / 2,
+                      width: (MediaQuery.of(context).size.width - 48 - 12) / 2,
                       child: _AchievementCard(data: a),
                     ))
                 .toList(),
@@ -238,8 +237,7 @@ class _ExperienceCard extends StatelessWidget {
           children: [
             // Level badge
             Container(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               color: levelColor.withValues(alpha: 0.15),
               child: Text(
                 experience.level,
@@ -326,8 +324,8 @@ class _ExperienceCard extends StatelessWidget {
                 // Tech tags
                 if (experience.techTags.isNotEmpty)
                   Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 16, vertical: 12),
                     child: Wrap(
                       spacing: 6,
                       runSpacing: 4,
